@@ -1,24 +1,34 @@
 package Forth_JavaoopCharacter;
 
 public class P78_PrivOverride {
-	private void f() { System.out.println("private f()"); }
-	int a=0;
-	public static void main(String[] args) {
-		P78_PrivOverride po = new Derived();
-		po.f();
-		
-		Derived iDerived=new Derived();
-		iDerived .f();
-		iDerived .s();
-	//	P78_PrivOverride cOverride=new Derived() ;
-		P78_PrivOverride cOverride=iDerived ;
-		
-		cOverride .f();//Ã»ÓÐ±»¸²¸ÇËÕÅ¶Ò»·ÃÎÊµÄÖ±½ÓÊÇprivate¡£
-		System .out .println(cOverride.a);
-	}
+    int a = 0;
+
+    public static void main(String[] args) {
+        P78_PrivOverride po = new Derived();
+        po.f();
+
+        Derived iDerived = new Derived();
+        iDerived.f();
+        iDerived.s();
+        //	P78_PrivOverride cOverride=new Derived() ;
+        P78_PrivOverride cOverride = iDerived;
+
+        cOverride.f();//Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¶Ò»ï¿½ï¿½ï¿½Êµï¿½Ö±ï¿½ï¿½ï¿½ï¿½privateï¿½ï¿½
+        System.out.println(cOverride.a);
+    }
+
+    private void f() {
+        System.out.println("private f()");
+    }
 }
+
 class Derived extends P78_PrivOverride {
-	public int a=9;
-	public void s() {}
-	public void f() { System.out.println("public f()"); }//Ã»ÓÐ±»¸²¸Ç£¬ËùÒÔ·ÃÎÊµÄ
+    public int a = 9;
+
+    public void s() {
+    }
+
+    public void f() {
+        System.out.println("public f()");
+    }//Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½Êµï¿½
 }

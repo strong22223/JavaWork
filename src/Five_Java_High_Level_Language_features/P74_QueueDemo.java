@@ -1,5 +1,8 @@
 package Five_Java_High_Level_Language_features;
-import java.util.*;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Random;
 
 public class P74_QueueDemo {
     public static void printQ(Queue queue) {

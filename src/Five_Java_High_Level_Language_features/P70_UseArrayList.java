@@ -1,48 +1,53 @@
 package Five_Java_High_Level_Language_features;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class P70_UseArrayList {
-    public static void main(String []args) {
+    public static void main(String[] args) {
 
         List<String> scores = new ArrayList<>();
-        List<String> people=new ArrayList<>();
-        people.add("Äã");        people.add("ÎÒ");        people.add("Ëû");
+        List<String> people = new ArrayList<>();
+        people.add("ï¿½ï¿½");
+        people.add("ï¿½ï¿½");
+        people.add("ï¿½ï¿½");
 
-        int num=10;
-        for(int i=0;i<num;i++){
-            String s=""+i;
-            scores.add(s) ;
+        int num = 10;
+        for (int i = 0; i < num; i++) {
+            String s = "" + i;
+            scores.add(s);
         }
         System.out.println(scores);
 
-        scores.add(1, "99");//Ö¸¶¨µÄÎ»ÖÃÌí¼ÓÔªËØ
+        scores.add(1, "99");//Ö¸ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
         System.out.println(scores);
-        //Ê¹ÓÃ¼ÓÇ¿forÑ­»·½«ÆäÊä³ö
+        //Ê¹ï¿½Ã¼ï¿½Ç¿forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         for (String S : scores) {
-            System.out.print(" "+S);
+            System.out.print(" " + S);
         }
         System.out.println();
-        //ÐÞ¸ÄÖ¸¶¨Î»ÖÃµÄ¶îÔªËØ
+        //ï¿½Þ¸ï¿½Ö¸ï¿½ï¿½Î»ï¿½ÃµÄ¶ï¿½Ôªï¿½ï¿½
         scores.set(1, "77");
         System.out.println(scores);
-        //É¾³ýÖ¸¶¨Î»ÖÃµÄÔªËØ
+        //É¾ï¿½ï¿½Ö¸ï¿½ï¿½Î»ï¿½Ãµï¿½Ôªï¿½ï¿½
         scores.remove(0);
         System.out.println(scores);
 
-        System.out.println("É¾³ýºóµÄÔªËØÊÇ£º");
-        for (String S:scores) {
-            System.out.print(" "+S );
-        }  System.out.println();
-        System.out.println("×Ö·û´®Êä³öµÄ½á¹ûÊÇ£º"+scores.toString());
+        System.out.println("É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç£ï¿½");
+        for (String S : scores) {
+            System.out.print(" " + S);
+        }
+        System.out.println();
+        System.out.println("ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç£ï¿½" + scores.toString());
 
-        //½ØÈ¡ËùÊôµÄ·¶Î§µÄÔªËØ£¬²¢²»ÊÇ´´½¨ÁËÒ»¸ö×ÓLISTÖ»ÊÇÒ»¸öÓ³Éä¡£
-        System.out.println("½ØÈ¡µÄ×ÓLIST :"+scores.subList(1,5));
-        List<String >son=scores.subList(1,5);son.clear();
-        System.out.println("É¾³ý×ÓListºóµÄ¸¸List "+scores);
-        //peopleÖÐµÄÔªËØÈ«²¿¸øscores
-        if( scores.addAll(2,people))
-        System.out.println(scores);
+        //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Î§ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½LISTÖ»ï¿½ï¿½Ò»ï¿½ï¿½Ó³ï¿½ä¡£
+        System.out.println("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½LIST :" + scores.subList(1, 5));
+        List<String> son = scores.subList(1, 5);
+        son.clear();
+        System.out.println("É¾ï¿½ï¿½ï¿½ï¿½Listï¿½ï¿½Ä¸ï¿½List " + scores);
+        //peopleï¿½Ðµï¿½Ôªï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½scores
+        if (scores.addAll(2, people))
+            System.out.println(scores);
 
     }
 }

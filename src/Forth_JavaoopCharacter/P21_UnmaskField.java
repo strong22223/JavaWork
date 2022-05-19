@@ -2,19 +2,24 @@ package Forth_JavaoopCharacter;
 
 public class P21_UnmaskField {
 
-	private int x = 1;
-	private int y = 1;
-	public void changeFields(int a, int b) {
-		x = a;		//xÖ¸³ÉÔ±±äÁ¿
-		int y = b;	//¾Ö²¿±äÁ¿yÊ¹Í¬ÃûµÄÀà³ÉÔ±±äÁ¿±»Òþ²Ø
-		this.y=8;	//this.yÖ¸³ÉÔ±±äÁ¿
-		System.out.println("x=" + x + "; y=" + y); //¾Ö²¿±äÁ¿yµÄÖµ
-	}
-	public void PrintFields() { System.out.println("x=" + x + "; y=" + y); }
-	public static void main(String args[]) {
-		P21_UnmaskField  uf = new P21_UnmaskField();
-		uf.PrintFields();
-		uf.changeFields(10,9);
-		uf.PrintFields();
-	}
+    private int x = 1;
+    private int y = 1;
+
+    public static void main(String args[]) {
+        P21_UnmaskField uf = new P21_UnmaskField();
+        uf.PrintFields();
+        uf.changeFields(10, 9);
+        uf.PrintFields();
+    }
+
+    public void changeFields(int a, int b) {
+        x = a;        //xÖ¸ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+        int y = b;    //ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½yÊ¹Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        this.y = 8;    //this.yÖ¸ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+        System.out.println("x=" + x + "; y=" + y); //ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½ï¿½Öµ
+    }
+
+    public void PrintFields() {
+        System.out.println("x=" + x + "; y=" + y);
+    }
 }

@@ -4,24 +4,31 @@
 4:
 5:public class P33_BufferedIO {
 6:
-7:        public static void main(String[] args) throws IOException{
-8:            File a=new File("D:\\WorkDoxc\\xd_javawork\\src\\Seven_InputOutput\\P33_BufferedIO.java");
-9:            File b= new File("D:\\WorkDoxc\\xd_javawork\\src\\Seven_InputOutput\\P33.txt");
-10:          System.out.println(b.exists());
-11:            BufferedReader in=new BufferedReader(
-12:                    new FileReader(a));
-13:            PrintWriter out=new PrintWriter( new BufferedWriter(
-14:                    new FileWriter(b)));
-15:            String s;
-16:            int linecnt=1;
-17:            StringBuilder sb=new StringBuilder();
-18:            while((s=in.readLine())!=null){
-19:                sb.append(linecnt+":"+s+"\n");
-20:                out.println(linecnt+":"+s);
-21:                linecnt++;
-22:            }
-23:            in.close();
-24:            out.close();
-25:            System.out.print(sb.toString());
-26:        }
-27:}
+7:    public static void main(String[] args)  {
+8:        File a = new File("D:\\WorkDoxc\\xd_javawork\\src\\Seven_InputOutput\\P33_BufferedIO.java");
+9:        File b = new File("D:\\WorkDoxc\\xd_javawork\\src\\Seven_InputOutput\\P33.txt");
+10:        System.out.println(b.exists());
+11:
+12:        try{  BufferedReader in = new BufferedReader(
+13:                new FileReader(a));
+14:            PrintWriter out = new PrintWriter(new BufferedWriter(
+15:                    new FileWriter(b)));
+16:            String s;
+17:            int linecnt = 1;
+18:            StringBuilder sb = new StringBuilder();
+19:            while ((s = in.readLine()) != null) {
+20:                sb.append(linecnt + ":" + s + "\n");
+21:                out.println(linecnt + ":" + s);
+22:                linecnt++;
+23:            }
+24:            System.out.println(sb);
+25:            in.close();
+26:            out.close();
+27:        }catch(IOException e){
+28:            System.err.println(e.getMessage());
+29:        }
+30:
+31:
+32://        System.out.print(sb.toString());
+33:    }
+34:}

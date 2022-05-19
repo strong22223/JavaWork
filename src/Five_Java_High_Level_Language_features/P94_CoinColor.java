@@ -1,20 +1,26 @@
 package Five_Java_High_Level_Language_features;
 
 
-
-enum Coin { PENNY(1), NICKEL(5), DIME(10), QUARTER(25);
+enum Coin {
+    PENNY(1), NICKEL(5), DIME(10), QUARTER(25);
     private final int value;
-    Coin(int value) { this.value = value; }
+
+    Coin(int value) {
+        this.value = value;
+    }
 
 
-    public int value() { return value; }
+    public int value() {
+        return value;
+    }
 }
-enum CoinColor { COPPER, NICKEL, SILVER }
+
+enum CoinColor {COPPER, NICKEL, SILVER}
 
 public class P94_CoinColor {
-//   Coin c= new Coin(2);
+    //   Coin c= new Coin(2);
     public static void main(String[] args) {
-       System.out.println(Coin.PENNY);
+        System.out.println(Coin.PENNY);
 
         for (Coin c : Coin.values()) {
             System.out.print(c + ": " + c.value() + ", ");

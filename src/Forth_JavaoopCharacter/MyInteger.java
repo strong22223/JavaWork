@@ -3,351 +3,370 @@ package Forth_JavaoopCharacter;
 import java.util.LinkedList;
 import java.util.Scanner;
 
- 
- 
+
 public class MyInteger {
-	
-	LinkedList <Integer> longIntegers=new LinkedList<Integer>();
-	Scanner inScanner=new Scanner(System .in);
-	int flag=1;//·ûºÅÎ»
-	public int length;//´æ´¢Êı×ÖµÄ³¤¶È
-	//º¯ÊıÀà
-	fun f=new fun();//µ÷ÓÃµÄ·½·¨Àà
-	
-	
-	
-	
-	public MyInteger () {
-		 length=longIntegers .size();
-	}
-	public MyInteger (String lString ) {
-		 
-		 length=longIntegers .size();
-		 input (lString );
-	}
-	//¹¹Ôì·½·¨À´³õÊ¼»¯³¤¶ÈLength
- 
-	
-	//ÖØĞ´toString·½·¨
-	@Override
-	public String toString() {
-		String  c = "";
-		 String b="";
-		 for(int i=longIntegers .size() -1;i>=0;i--) {
-			 c = b+longIntegers .get(i);
-			 b=c;
-		 }
-		 if(this.flag ==-1)
-		return "-"+c ;
-		 return c;
-	}
-	
 
-	//ÖØĞ´equals
-	public String equals(MyInteger   a) {
-		 
-		int i=0;
-		MyInteger c=(MyInteger)a;
-		int flag=0;
-		if(this.length >c .length) {
-			 flag=1;
-		}
-		else if (this.length ==c.length ){	
-				
-				while(i<this.length ) {
-					if( this.longIntegers.get(i)>c.longIntegers .get(i)) {
-						flag=1;break;
-					}
-					else if(this.longIntegers.get(i)<c.longIntegers .get(i)) {
-						flag=-1;
-						break;
-					} else flag=0;
-				}
-				
-			}
-		else
-				flag=-1;
-		
-		switch(flag) {
-		case 1:return "´óÓÚ";
-		case -1:return "Ğ¡ÓÚ";
-		case 0: return "µÈÓÚ";
-		
-		}
-		return "ERROR";
-	}
-	
-	//ÅĞ¶ÏÊÇ·ñÎªÒ»¸öÊı×Ö
-	private boolean isdigit(String lString ) {
-		//´æ´¢µÄÊ±¼äµ¹×Å´æ´¢¡£·½±ã¼ÆËã
-		 for(int i=lString .length()-1,k=0;i>=0;i--) {
-			 //ÅĞ¶ÏÊÇ·ñÎªÊı×Ö
-			 int temp=0;//À´¼ÇÂ¼¡®£¬¡¯³öÏÖµÄ´ÎÊı
-			 char ch=lString .charAt(i);
-			 if(Character .isDigit(ch)||ch==','||ch=='-'){//Ò»¸öÊı×ÖÓÉÕâĞ©²¿·Ö×é³É
-				 if(ch==',') {
-					 temp++;
-				 if((temp+k)%3!=1)
-					 return false;
-				 }
-				 if(ch=='-') {
-					 if(i!=0)
-						  return false;
-				 }
-			 }
-			 else { return false;} 
-			 if(ch!=',')k++;//ºöÂÔ¡®£¬¡¯µÄÓ°Ïì
-		 }
-		 if(lString .charAt(0)=='-')
-			 this.flag=-1;//±ê¼ÇÕâ¸öÊı×ÖÎ»¸ºÊı
-		 //´æÈëÊı×Ö
-		 for(int i=lString .length()-1,k=0;i>=0;i--) {
-			 char ch=lString .charAt(i);
-			 if((Character .isDigit(ch))) {
-				 longIntegers .add(k,0);
-				 longIntegers .set(k,  ch-'0');
-				 k++;//¼ÇµÃ£¬´óÎŞÓï
-			 }
-		 }
-		return true;
-	}
-	//ÉèÖÃ
-	public boolean set(String l) {
-		//³É¹¦¶îÊ±¼ä·µ»Øtrue
-		if(this.input(l))
-			return true;
-		return false;
-		
-	}
-	//ÊäÈëÕâ¸öÊı×Ö
-	protected boolean  input() {
-		System .out .println("ÇëÊäÈë³¤ÕûÊı£º");
-		String iString  =inScanner  .nextLine();
-		this.longIntegers .clear();
-		 while(!isdigit(iString)) {
-			 System.out.println("ÊäÈë´íÎó£¬ÊÇ·ñĞèÒªÖØĞÂÊäÈë£¿Yes/No");
-			iString = inScanner .nextLine();
-			 if(iString  .equals("Yes")) {
-				 iString=inScanner  .nextLine();	 
-			 } else { System .out .println("½áÊø");return false;}
-		 }
-		 //ÖØÖÃ³¤¶È
-		  length=longIntegers .size();
-		 return true;
-	}
-	protected boolean input(String iString ) {
-		this.longIntegers .clear();
-		 while(!isdigit(iString)) {
-			 System.out.println("ÊäÈë´íÎó£¬ÊÇ·ñĞèÒªÖØĞÂÊäÈë£¿Yes/No");
-			iString = inScanner .nextLine();
-			 if(iString  .equals("Yes")) {
-				 iString=inScanner  .nextLine();	 
-			 } else { System .out .println("½áÊø");return false;}
-		 }
-		 //ÖØÖÃ³¤¶È
-		  length=longIntegers .size();
-		 return true;
+    public int length;//ï¿½æ´¢ï¿½ï¿½ï¿½ÖµÄ³ï¿½ï¿½ï¿½
+    LinkedList<Integer> longIntegers = new LinkedList<Integer>();
+    Scanner inScanner = new Scanner(System.in);
+    int flag = 1;//ï¿½ï¿½ï¿½ï¿½Î»
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    fun f = new fun();//ï¿½ï¿½ï¿½ÃµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	}
-	//Êä³öÒ»¸öÊı×Ö
-	public void output() {  
-		System .out .println(this .toString());
-	}
 
-	//·½·¨
-	class fun{
-		//swap
-		private boolean  swap(MyInteger A,MyInteger B) {
-			//µ÷ÓÃÍâ°üÀàµÄ³ÉÔ±,ÊµÏÖ½»»»·µ»ØÕæ
-			//MyInteger .this.longIntegers .clear();
-			if (A .equals(B).equals("Ğ¡ÓÚ") ) {//ÊµÏÖ½»»»¡£
-				MyInteger t=new MyInteger() ;
-				t.longIntegers =A.longIntegers ;t.length =A.length ;t.flag =A.flag ;
-				A.longIntegers =B.longIntegers ;A.length =B.length ;A.flag=B.flag ;
-				B.longIntegers=t.longIntegers ;B.length =t.length ;B.flag =t.flag ;
-			return true;	
-			}
-			return false;
-		}
-		//¼Ó·¨
-		private MyInteger add(MyInteger aInter,MyInteger bInter){
-			//ÎªÁË½â¾öÔÚ½»»»µÄÊ±¼ä½«Ô­Ê¼Êı¾İ½»»»£¬²ÉÓÃkelong
-			MyInteger A=aInter;
-			MyInteger B=bInter;
-			//½»»»È·¶¨»ù×¼,
-			MyInteger .this.longIntegers .clear();
-			boolean swaped=(f.swap(A, B));
-				
-		
-			int Alen=A.length-1 ;//È·¶¨³¤¶È£¬Ö±½ÓÈ·¶¨¼ÆËãµÄÎ»ÖÃ
-			int Blen=B.length-1;
-			//ÒÔ×î¶ÌµÄ×÷ÎªÒ»¸ö±ê×¼
-			int i=0, a=0;
-			while(i<=Alen) {
-				
-				MyInteger.this.longIntegers .add(i,0);
-				if(i<=Blen) 
-					a=A.longIntegers.get(i)+B.longIntegers.get(i)+a;
-				else
-					a=A.longIntegers.get(i);
-				
-				MyInteger .this.longIntegers .set(i,(a%10));
-				a/=10;
-				//System .out.println("¼ÓºÍÎª"+resultIntegers .get(i));
-				//Ö»ÓĞÔÚÎ»ÊıĞ¡µÄÊı×Ö±äÎª0µÄÊ±¼ä²ÉÈ¥¼õ·¨
-				i++;
-			}
-			if(swaped)f.swap(B, A);
-			return MyInteger .this;
-		}
-		//¼õ·¨
-		private MyInteger sub(MyInteger aInter,MyInteger bInter) {
-			//½»»»À´È·¶¨»ù×¼
-			MyInteger A=aInter ;
-			MyInteger B=bInter ;
-			MyInteger .this.longIntegers .clear();
-			 boolean swaped =f.swap(A , B);
-			
-			int  Alen=A .length-1 ;//È·¶¨³¤¶È£¬Ö±½ÓÈ·¶¨¼ÆËãµÄÎ»ÖÃ
-			int Blen=B .length-1;
-		 
-			 
-				//ÒÔ×î¶ÌµÄ×÷ÎªÒ»¸ö±ê×¼
-			int i=0,min=0,sub=0,next=0;
-			while(i<=Alen ) { 
-				//Î»ÊıµÄÈ·¶¨
-				if(i!=Alen ||A.longIntegers .get(i)!=0) {
-					longIntegers .add(i,0);
-					min=A .longIntegers .get(i);
-					if(i<=Blen )
-					sub=B .longIntegers .get(i);
-					if(i<Alen )
-					next=A .longIntegers .get(i+1); 
-					
-					if(i<=Blen) {
-					
-						 if(min<sub) {
-							 min+=10;//½áÎ»Ïà¼õ
-							 A.longIntegers .set(i+1,  next-1); 
-							 longIntegers .set(i,  min-sub );
-						 }	
-						 else MyInteger .this .longIntegers .set(i, min-sub);		 
-					}
-					else MyInteger .this.longIntegers  .set(i, min);
-				//½â¾ö²»¶ÏÏò½áÎ²µÄ¿ÕÈ±
-					}
-					i++;
-			} 
-		if(swaped)	f.swap(B , A);//½»»»»ØÀ´
-			return MyInteger .this;
-		}
-		
-	}
-	public MyInteger addition(MyInteger A,MyInteger B) {
-		//ÖØÖÃ,ÔÚÊä³öÖ®ºóÍË³ö£¡£¡£¡ÒÑ¾­½»»»¹ı£¬Òª²»»áÖØ¸´Ö´ĞĞ
-		//ÔÚ×÷Îª×Ê¸ñ½ÓÊÜ½á¹ûµÄÊ±¼ä
-		if(A.flag ==1&&B.flag ==1) {
-			f.add(A, B);	 
-			//this.output(); 
-			return this;
-		}
-		 if(A.flag==-1&&B.flag ==-1) {
-			f.add(A, B);
-			this.flag =-1;
-//			this.output(); 
-			return this;
-		}
-		if (A.flag==-1&&B.flag==1)
-		{
-			if(A.equals(B).equals("´óÓÚ")) {
-				f.sub(A, B);
-				this.flag=-1;
-			}else 
-				f.sub(A, B);
-			
-//			this.output(); 
-			return this;
-		}
-		if(A.flag ==1&&B.flag ==-1) {
-			if(A.equals(B).equals("Ğ¡ÓÚ")){
-				f.sub(A, B);
-				this.flag =-1;
-			}else 	
-				f.sub(A, B);
-			
-//			this.output(); 
-			return this;
-		}
-			
-//		this.output(); 
-		return this;
-	}
-	 
-	//¼õ·¨,Ç°Õß¼õÈ¥ºóÕß
- 
-	public MyInteger subtraction(MyInteger A,MyInteger B) {
-		//´óµÄÊı×ÖÊÇA,¿ÉÑ¡ÔñµÄÔÚ×÷Îª½á¹ûÖ±½ÓÊä³ö
-		 
-		if(A.flag ==-1&&B.flag==1) {
-			f.add(A, B);
-			this.flag =-1;
-	//		this.output(); 
-			return this;
-		} 
-		if(A.flag==-1&&B.flag==-1) {
-			if(A.equals(B).equals("´óÓÚ")) {
-				f.sub(A, B);
-				this.flag =-1;
-			} 
-			else
-				f.sub(A, B);
-			
-		//	this.output(); 
-			return this;
-		}
-		 if(A.flag ==1&&B.flag ==1) {
-			if(A.equals(B).equals("Ğ¡ÓÚ")) {
-				f.sub(A, B);
-				this.flag =-1;
-			} else 
-				f.sub(A, B);
-			
-			//this.output(); 
-			return this;
-		}
-		 if(A.flag ==1&&B.flag==-1) {
-			f.add(A, B);
-			//this.output(); 
-			return this;
-		}
-		//this.output(); 
-		return this;
-	}
-	//Î´Íê³É³Ë·¨
-	public   MyInteger     multiplication(MyInteger A,MyInteger B) {
-		int Alen=A.length-1 ;//È·¶¨³¤¶È£¬Ö±½ÓÈ·¶¨¼ÆËãµÄÎ»ÖÃ
-		int Blen=B.length-1;
- 
-		if (Alen>Blen ) {//ÊµÏÖ½»»»¡£
-			int temp=Alen ;Alen =Blen ;Blen =temp;
-			MyInteger tInteger=A;A=B;B=tInteger;
-		}
-		//ÒÔ×î¶ÌµÄ×÷ÎªÒ»¸ö±ê×¼
-		int a=0;
-		for(int i=0;i<=Alen ;i++) {
-			for(int j=0;j<=Blen ;j++) {
-				a=A.longIntegers  .get(i)*B.longIntegers .get(j)+a; 
-			//	if()
-				longIntegers .add(i,0);	
-				longIntegers .set(i,(a%10));
-			 a/=10;
-			} 
-		}
-			
-		this.output(); 
-		return this;
-	}
-	 
-	
+    public MyInteger() {
+        length = longIntegers.size();
+    }
+
+    public MyInteger(String lString) {
+
+        length = longIntegers.size();
+        input(lString);
+    }
+    //ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Length
+
+
+    //ï¿½ï¿½Ğ´toStringï¿½ï¿½ï¿½ï¿½
+    @Override
+    public String toString() {
+        String c = "";
+        String b = "";
+        for (int i = longIntegers.size() - 1; i >= 0; i--) {
+            c = b + longIntegers.get(i);
+            b = c;
+        }
+        if (this.flag == -1)
+            return "-" + c;
+        return c;
+    }
+
+
+    //ï¿½ï¿½Ğ´equals
+    public String equals(MyInteger a) {
+
+        int i = 0;
+        MyInteger c = (MyInteger) a;
+        int flag = 0;
+        if (this.length > c.length) {
+            flag = 1;
+        } else if (this.length == c.length) {
+
+            while (i < this.length) {
+                if (this.longIntegers.get(i) > c.longIntegers.get(i)) {
+                    flag = 1;
+                    break;
+                } else if (this.longIntegers.get(i) < c.longIntegers.get(i)) {
+                    flag = -1;
+                    break;
+                } else flag = 0;
+            }
+
+        } else
+            flag = -1;
+
+        switch (flag) {
+            case 1:
+                return "ï¿½ï¿½ï¿½ï¿½";
+            case -1:
+                return "Ğ¡ï¿½ï¿½";
+            case 0:
+                return "ï¿½ï¿½ï¿½ï¿½";
+
+        }
+        return "ERROR";
+    }
+
+    //ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private boolean isdigit(String lString) {
+        //ï¿½æ´¢ï¿½ï¿½Ê±ï¿½äµ¹ï¿½Å´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        for (int i = lString.length() - 1, k = 0; i >= 0; i--) {
+            //ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½ï¿½
+            int temp = 0;//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½
+            char ch = lString.charAt(i);
+            if (Character.isDigit(ch) || ch == ',' || ch == '-') {//Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                if (ch == ',') {
+                    temp++;
+                    if ((temp + k) % 3 != 1)
+                        return false;
+                }
+                if (ch == '-') {
+                    if (i != 0)
+                        return false;
+                }
+            } else {
+                return false;
+            }
+            if (ch != ',') k++;//ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½
+        }
+        if (lString.charAt(0) == '-')
+            this.flag = -1;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        for (int i = lString.length() - 1, k = 0; i >= 0; i--) {
+            char ch = lString.charAt(i);
+            if ((Character.isDigit(ch))) {
+                longIntegers.add(k, 0);
+                longIntegers.set(k, ch - '0');
+                k++;//ï¿½ÇµÃ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            }
+        }
+        return true;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½
+    public boolean set(String l) {
+        //ï¿½É¹ï¿½ï¿½ï¿½Ê±ï¿½ä·µï¿½ï¿½true
+        if (this.input(l))
+            return true;
+        return false;
+
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    protected boolean input() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ë³¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        String iString = inScanner.nextLine();
+        this.longIntegers.clear();
+        while (!isdigit(iString)) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¿Yes/No");
+            iString = inScanner.nextLine();
+            if (iString.equals("Yes")) {
+                iString = inScanner.nextLine();
+            } else {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½");
+                return false;
+            }
+        }
+        //ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½
+        length = longIntegers.size();
+        return true;
+    }
+
+    protected boolean input(String iString) {
+        this.longIntegers.clear();
+        while (!isdigit(iString)) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¿Yes/No");
+            iString = inScanner.nextLine();
+            if (iString.equals("Yes")) {
+                iString = inScanner.nextLine();
+            } else {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½");
+                return false;
+            }
+        }
+        //ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½
+        length = longIntegers.size();
+        return true;
+
+    }
+
+    //ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public void output() {
+        System.out.println(this.toString());
+    }
+
+    public MyInteger addition(MyInteger A, MyInteger B) {
+        //ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½Ö´ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½Îªï¿½Ê¸ï¿½ï¿½ï¿½Ü½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+        if (A.flag == 1 && B.flag == 1) {
+            f.add(A, B);
+            //this.output();
+            return this;
+        }
+        if (A.flag == -1 && B.flag == -1) {
+            f.add(A, B);
+            this.flag = -1;
+//			this.output();
+            return this;
+        }
+        if (A.flag == -1 && B.flag == 1) {
+            if (A.equals(B).equals("ï¿½ï¿½ï¿½ï¿½")) {
+                f.sub(A, B);
+                this.flag = -1;
+            } else
+                f.sub(A, B);
+
+//			this.output();
+            return this;
+        }
+        if (A.flag == 1 && B.flag == -1) {
+            if (A.equals(B).equals("Ğ¡ï¿½ï¿½")) {
+                f.sub(A, B);
+                this.flag = -1;
+            } else
+                f.sub(A, B);
+
+//			this.output();
+            return this;
+        }
+
+//		this.output();
+        return this;
+    }
+
+    public MyInteger subtraction(MyInteger A, MyInteger B) {
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A,ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½
+
+        if (A.flag == -1 && B.flag == 1) {
+            f.add(A, B);
+            this.flag = -1;
+            //		this.output();
+            return this;
+        }
+        if (A.flag == -1 && B.flag == -1) {
+            if (A.equals(B).equals("ï¿½ï¿½ï¿½ï¿½")) {
+                f.sub(A, B);
+                this.flag = -1;
+            } else
+                f.sub(A, B);
+
+            //	this.output();
+            return this;
+        }
+        if (A.flag == 1 && B.flag == 1) {
+            if (A.equals(B).equals("Ğ¡ï¿½ï¿½")) {
+                f.sub(A, B);
+                this.flag = -1;
+            } else
+                f.sub(A, B);
+
+            //this.output();
+            return this;
+        }
+        if (A.flag == 1 && B.flag == -1) {
+            f.add(A, B);
+            //this.output();
+            return this;
+        }
+        //this.output();
+        return this;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½,Ç°ï¿½ß¼ï¿½È¥ï¿½ï¿½ï¿½ï¿½
+
+    //Î´ï¿½ï¿½É³Ë·ï¿½
+    public MyInteger multiplication(MyInteger A, MyInteger B) {
+        int Alen = A.length - 1;//È·ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½Ö±ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+        int Blen = B.length - 1;
+
+        if (Alen > Blen) {//Êµï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
+            int temp = Alen;
+            Alen = Blen;
+            Blen = temp;
+            MyInteger tInteger = A;
+            A = B;
+            B = tInteger;
+        }
+        //ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½×¼
+        int a = 0;
+        for (int i = 0; i <= Alen; i++) {
+            for (int j = 0; j <= Blen; j++) {
+                a = A.longIntegers.get(i) * B.longIntegers.get(j) + a;
+                //	if()
+                longIntegers.add(i, 0);
+                longIntegers.set(i, (a % 10));
+                a /= 10;
+            }
+        }
+
+        this.output();
+        return this;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½
+    class fun {
+        //swap
+        private boolean swap(MyInteger A, MyInteger B) {
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½Ô±,Êµï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            //MyInteger .this.longIntegers .clear();
+            if (A.equals(B).equals("Ğ¡ï¿½ï¿½")) {//Êµï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
+                MyInteger t = new MyInteger();
+                t.longIntegers = A.longIntegers;
+                t.length = A.length;
+                t.flag = A.flag;
+                A.longIntegers = B.longIntegers;
+                A.length = B.length;
+                A.flag = B.flag;
+                B.longIntegers = t.longIntegers;
+                B.length = t.length;
+                B.flag = t.flag;
+                return true;
+            }
+            return false;
+        }
+
+        //ï¿½Ó·ï¿½
+        private MyInteger add(MyInteger aInter, MyInteger bInter) {
+            //Îªï¿½Ë½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä½«Ô­Ê¼ï¿½ï¿½ï¿½İ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kelong
+            MyInteger A = aInter;
+            MyInteger B = bInter;
+            //ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½×¼,
+            MyInteger.this.longIntegers.clear();
+            boolean swaped = (f.swap(A, B));
+
+
+            int Alen = A.length - 1;//È·ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½Ö±ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+            int Blen = B.length - 1;
+            //ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½×¼
+            int i = 0, a = 0;
+            while (i <= Alen) {
+
+                MyInteger.this.longIntegers.add(i, 0);
+                if (i <= Blen)
+                    a = A.longIntegers.get(i) + B.longIntegers.get(i) + a;
+                else
+                    a = A.longIntegers.get(i);
+
+                MyInteger.this.longIntegers.set(i, (a % 10));
+                a /= 10;
+                //System .out.println("ï¿½Óºï¿½Îª"+resultIntegers .get(i));
+                //Ö»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Îª0ï¿½ï¿½Ê±ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½
+                i++;
+            }
+            if (swaped) f.swap(B, A);
+            return MyInteger.this;
+        }
+
+        //ï¿½ï¿½ï¿½ï¿½
+        private MyInteger sub(MyInteger aInter, MyInteger bInter) {
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½×¼
+            MyInteger A = aInter;
+            MyInteger B = bInter;
+            MyInteger.this.longIntegers.clear();
+            boolean swaped = f.swap(A, B);
+
+            int Alen = A.length - 1;//È·ï¿½ï¿½ï¿½ï¿½ï¿½È£ï¿½Ö±ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+            int Blen = B.length - 1;
+
+
+            //ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½×¼
+            int i = 0, min = 0, sub = 0, next = 0;
+            while (i <= Alen) {
+                //Î»ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½
+                if (i != Alen || A.longIntegers.get(i) != 0) {
+                    longIntegers.add(i, 0);
+                    min = A.longIntegers.get(i);
+                    if (i <= Blen)
+                        sub = B.longIntegers.get(i);
+                    if (i < Alen)
+                        next = A.longIntegers.get(i + 1);
+
+                    if (i <= Blen) {
+
+                        if (min < sub) {
+                            min += 10;//ï¿½ï¿½Î»ï¿½ï¿½ï¿½
+                            A.longIntegers.set(i + 1, next - 1);
+                            longIntegers.set(i, min - sub);
+                        } else MyInteger.this.longIntegers.set(i, min - sub);
+                    } else MyInteger.this.longIntegers.set(i, min);
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½Ä¿ï¿½È±
+                }
+                i++;
+            }
+            if (swaped) f.swap(B, A);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            return MyInteger.this;
+        }
+
+    }
+
 
 }

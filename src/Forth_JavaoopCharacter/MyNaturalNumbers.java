@@ -1,116 +1,128 @@
 package Forth_JavaoopCharacter;
 
 public class MyNaturalNumbers extends MyInteger {
-	//³¤¶È,
-	 
-	final int flag=1;//À´±£Ö¤×ÔÈ»ÊýµÄ·ûºÅÎ»²»»á ·¢Éú±ä»¯
-	public MyNaturalNumbers () {
-	}
-	public MyNaturalNumbers (String a) {
-		input(a);
-	}
-	public boolean input(String iString) {
-		this.longIntegers .clear();
-		 while(!isdigit(iString)) {
-			 System.out.println("ÊäÈë´íÎó£¬ÊÇ·ñÐèÒªÖØÐÂÊäÈë£¿Yes/No");
-			iString = inScanner .nextLine();
-			 if(iString  .equals("Yes")) {
-				 iString=inScanner  .nextLine();	 
-			 } else { System .out .println("½áÊø");return false;}
-		 }
-		 //ÖØÖÃ³¤¶È
-		  length=longIntegers .size();
-		 return true;
-	}
-	@Override 
-		public boolean set(String l) {
-		//³É¹¦¶îÊ±¼ä·µ»Øtrue
-		if(this.input(l))
-			return true;
-		return false;
-	}
-	 //ÅÐ¶ÏÊÇ·ñÎªÒ»¸öÊý×Ö
-	private boolean isdigit(String lString ){
-		//´æ´¢µÄÊ±¼äµ¹×Å´æ´¢¡£·½±ã¼ÆËã
-		
-		 for(int i=lString .length()-1,k=0;i>=0;i--) {
-			 //ÅÐ¶ÏÊÇ·ñÎªÊý×Ö
-			 int temp=0;//À´¼ÇÂ¼¡®£¬¡¯³öÏÖµÄ´ÎÊý
-			 char ch=lString .charAt(i);
-			 if(Character .isDigit(ch)||ch==','){//Ò»¸öÊý×ÖÓÉÕâÐ©²¿·Ö×é³É
-				 if(ch==',') {
-					 temp++;
-				 if((temp+k)%3!=1)
-					 return false;
-				 }
-				 if(ch=='-') {
-					 if(i!=0)
-						  return false;
-				 }
-			 }
-			 else { return false;} 
-			 if(ch!=',')k++;//ºöÂÔ¡®£¬¡¯µÄÓ°Ïì
-		 }
-		 
-		 for(int i=lString .length()-1,k=0;i>=0;i--) {
-			 char ch=lString .charAt(i);
-			 if((Character .isDigit(ch))) {
-				 longIntegers .add(k,0);
-				 longIntegers .set(k,  ch-'0');
-				 k++;//¼ÇµÃ£¬´óÎÞÓï
-			 }
-		 }
-		return true;
-	}
-	//ÊµÏÖ
-	public MyInteger toMyInteger () {
-		if(this.flag ==-1)
-			//return false;
-			System .out .print("Òì³££¡");
-		MyInteger a=new MyInteger();
-		a.longIntegers =this.longIntegers ;
-		a.length =this.length ;
-		a.flag=1;
-		return a ;
-	}
-	  
-	public String equals(MyInteger   a) {
-		 
-		int i=0;
-		MyInteger c=(MyInteger)a;
-		int flag=0;
-		if(this.length >c .length) {
-			 flag=1;
-		}
-		else if (this.length ==c.length ){	
-				
-				while(i<this.length ) {
-					if( this.longIntegers.get(i)>c.longIntegers .get(i)) {
-						flag=1;break;
-					}
-					else if(this.longIntegers.get(i)<c.longIntegers .get(i)) {
-						flag=-1;
-						break;
-					} else flag=0;
-				}
-				
-			}
-		else
-				flag=-1;
-		
-		switch(flag) {
-		case 1:return "´óÓÚ";
-		case -1:return "Ð¡ÓÚ";
-		case 0: return "µÈÓÚ";
-		
-		}
-		return "ERROR";
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	 
-		MyNaturalNumbers cMyNaturalNumbers=new MyNaturalNumbers("-2324");
-		
-	}
+    //ï¿½ï¿½ï¿½ï¿½,
+
+    final int flag = 1;//ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½È»ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ä»¯
+
+    public MyNaturalNumbers() {
+    }
+
+    public MyNaturalNumbers(String a) {
+        input(a);
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        MyNaturalNumbers cMyNaturalNumbers = new MyNaturalNumbers("-2324");
+
+    }
+
+    public boolean input(String iString) {
+        this.longIntegers.clear();
+        while (!isdigit(iString)) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¿Yes/No");
+            iString = inScanner.nextLine();
+            if (iString.equals("Yes")) {
+                iString = inScanner.nextLine();
+            } else {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½");
+                return false;
+            }
+        }
+        //ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½
+        length = longIntegers.size();
+        return true;
+    }
+
+    @Override
+    public boolean set(String l) {
+        //ï¿½É¹ï¿½ï¿½ï¿½Ê±ï¿½ä·µï¿½ï¿½true
+        if (this.input(l))
+            return true;
+        return false;
+    }
+
+    //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private boolean isdigit(String lString) {
+        //ï¿½æ´¢ï¿½ï¿½Ê±ï¿½äµ¹ï¿½Å´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+        for (int i = lString.length() - 1, k = 0; i >= 0; i--) {
+            //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½ï¿½
+            int temp = 0;//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÄ´ï¿½ï¿½ï¿½
+            char ch = lString.charAt(i);
+            if (Character.isDigit(ch) || ch == ',') {//Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                if (ch == ',') {
+                    temp++;
+                    if ((temp + k) % 3 != 1)
+                        return false;
+                }
+                if (ch == '-') {
+                    if (i != 0)
+                        return false;
+                }
+            } else {
+                return false;
+            }
+            if (ch != ',') k++;//ï¿½ï¿½ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½
+        }
+
+        for (int i = lString.length() - 1, k = 0; i >= 0; i--) {
+            char ch = lString.charAt(i);
+            if ((Character.isDigit(ch))) {
+                longIntegers.add(k, 0);
+                longIntegers.set(k, ch - '0');
+                k++;//ï¿½ÇµÃ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            }
+        }
+        return true;
+    }
+
+    //Êµï¿½ï¿½
+    public MyInteger toMyInteger() {
+        if (this.flag == -1)
+            //return false;
+            System.out.print("ï¿½ì³£ï¿½ï¿½");
+        MyInteger a = new MyInteger();
+        a.longIntegers = this.longIntegers;
+        a.length = this.length;
+        a.flag = 1;
+        return a;
+    }
+
+    public String equals(MyInteger a) {
+
+        int i = 0;
+        MyInteger c = (MyInteger) a;
+        int flag = 0;
+        if (this.length > c.length) {
+            flag = 1;
+        } else if (this.length == c.length) {
+
+            while (i < this.length) {
+                if (this.longIntegers.get(i) > c.longIntegers.get(i)) {
+                    flag = 1;
+                    break;
+                } else if (this.longIntegers.get(i) < c.longIntegers.get(i)) {
+                    flag = -1;
+                    break;
+                } else flag = 0;
+            }
+
+        } else
+            flag = -1;
+
+        switch (flag) {
+            case 1:
+                return "ï¿½ï¿½ï¿½ï¿½";
+            case -1:
+                return "Ð¡ï¿½ï¿½";
+            case 0:
+                return "ï¿½ï¿½ï¿½ï¿½";
+
+        }
+        return "ERROR";
+    }
 
 }

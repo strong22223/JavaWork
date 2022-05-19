@@ -1,13 +1,14 @@
 package Five_Java_High_Level_Language_features;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class P64_FindDumps {
-    public static void main(String []args){
+    public static void main(String[] args) {
 
-        //´´½¨Ò»¸öHashSetµÄ¶ÔÏó£¬È±Ê¡µÄ³õÊ¼»¯ÈÝÁ¿Îª16
-        Set<String> s=new HashSet<String>();
-        //½«ÃüÁîÐÐµÄÃ¿¸ö×Ö·û¶¼Ìí¼Óµ½¼¯ºÏsÖÐ
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½HashSetï¿½Ä¶ï¿½ï¿½ï¿½È±Ê¡ï¿½Ä³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª16
+        Set<String> s = new HashSet<String>();
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ã¿ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½
     }
 
 }

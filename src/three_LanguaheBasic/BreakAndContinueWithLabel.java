@@ -1,15 +1,16 @@
 package three_LanguaheBasic;
 
-public class BreakAndContinueWithLabel{
-    public static void main(String[] args){
+public class BreakAndContinueWithLabel {
+    public static void main(String[] args) {
         String searchMe = "Look for a substring in me";
         String substring = "sub";
         boolean found = false;
         int max = searchMe.length() - substring.length();
-test: for (int i = 0; i <= max; i++) { 	// i:×Ó´®²éÕÒ¿ªÊ¼Î»ÖÃ
+        test:
+        for (int i = 0; i <= max; i++) {    // i:ï¿½Ó´ï¿½ï¿½ï¿½ï¿½Ò¿ï¿½Ê¼Î»ï¿½ï¿½
             int n = substring.length();
-            int j = i; 				// j:µ±Ç°ÔÚÖ÷´®ÖÐµÄ²éÕÒÎ»ÖÃ
-            int k = 0; 				// k:µ±Ç°ÔÚ×Ó´®ÖÐµÄ²éÕÒÎ»ÖÃ
+            int j = i;                // j:ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ²ï¿½ï¿½ï¿½Î»ï¿½ï¿½
+            int k = 0;                // k:ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ó´ï¿½ï¿½ÐµÄ²ï¿½ï¿½ï¿½Î»ï¿½ï¿½
             while (n-- != 0) {
                 if (searchMe.charAt(j++) != substring.charAt(k++)) {
                     continue test;
@@ -18,6 +19,6 @@ test: for (int i = 0; i <= max; i++) { 	// i:×Ó´®²éÕÒ¿ªÊ¼Î»ÖÃ
             found = true;
             break test;
         }
-        System.out.println(found ? "Found£¡" : "Didn't find£¡");
+        System.out.println(found ? "Foundï¿½ï¿½" : "Didn't findï¿½ï¿½");
     }
-}	//ÆäËûÀý×Ó£º BreakDemo.java£¬BreakWithLabelDemo.java
+}    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ BreakDemo.javaï¿½ï¿½BreakWithLabelDemo.java

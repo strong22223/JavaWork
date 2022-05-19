@@ -1,113 +1,122 @@
 package Five_Scores;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class Libaray {
-     /*Í¼Êé¹İÖĞÌá¹©µÄ¹¦ÄÜ
-        1.Í¼Êé¹İÌá¹©Êé¼®´æ´¢
-        2.Ìí¼ÓÊé¼®
-        3.²éÔÄÊé¼®
-        4.É¾³ıÊé¼®
-        5.Í¼Êé¹İÀàĞèÒª¶ÔÍâÌá¹©ËùÓĞÊé¼®µÄÃû³Æ£¬ËùÓĞÊé¼®¶ÔÓ¦µÄ×÷Õß¡¢³ö°æÉç
-     */
-    //½«Êé¼®¶ÔÓ¦µÄ±àºÅ×÷ÎªÊé¼®µÄÎ¨Ò»±êÊ¶£¬Ê¹ÓÃMapÀ´´æ´¢Êé¼®£¬ÒıÈëBookÀà£¬ºÍÃ¿Ò»¸öÊé¼®¶ÔÓ¦µÄ±àºÅ£¬´Ó1¿ªÊ¼£¬Ò²¿ÉÒÔÉèÖÃÎªISBNÂë
-    Libaray(){
-    }
-    HashMap<String,Books> machine=new HashMap<String, Books>();
-     private int ISBN=0;
-//
-//    //½èÔÄÊé¼®µÄ×î´óÊıÁ¿,»¹ÎªÍê³É½èÔÄ¹¦ÄÜ
+    HashMap<String, Books> machine = new HashMap<String, Books>();
+    //AllBookï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¹İ²Øµï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½Ï¢
+    public Collection ALLBook = machine.entrySet();
+    private int ISBN = 0;
+    //
+//    //ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Îªï¿½ï¿½É½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
 //    private final static int  MAXNUMBER=3;
-    //´æ´¢Êé¼®µÄµü´úÆ÷£¬Í¨¹ı¼üÀ´·ÃÎÊµ½Êé¼®µÄĞÅÏ¢  //ISBN±àºÅµÄµü´úÆ÷£¬»ñÈ¡¼ü£¬Í¨¹ı¼ü»ñÈ¡Êé¼®µÄĞÅÏ¢
-    private  Iterator<String> AllISBNIt=machine.keySet().iterator();
-  //AllBookÊÇËùÓĞÖµµÃĞÅÏ¢£¬Ò²¾ÍÊÇËùÓĞ¹İ²ØµÄÊé¼®µÄĞÅÏ¢
-    public Collection ALLBook=machine.entrySet();
+    //ï¿½æ´¢ï¿½é¼®ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½Ï¢  //ISBNï¿½ï¿½ÅµÄµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½é¼®ï¿½ï¿½ï¿½ï¿½Ï¢
+    private Iterator<String> AllISBNIt = machine.keySet().iterator();
+    /*Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½Ä¹ï¿½ï¿½ï¿½
+       1.Í¼ï¿½ï¿½ï¿½ï¿½á¹©ï¿½é¼®ï¿½æ´¢
+       2.ï¿½ï¿½ï¿½ï¿½é¼®
+       3.ï¿½ï¿½ï¿½ï¿½ï¿½é¼®
+       4.É¾ï¿½ï¿½ï¿½é¼®
+       5.Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ß¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    */
+    //ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Îªï¿½é¼®ï¿½ï¿½Î¨Ò»ï¿½ï¿½Ê¶ï¿½ï¿½Ê¹ï¿½ï¿½Mapï¿½ï¿½ï¿½æ´¢ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Bookï¿½à£¬ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ó¦ï¿½Ä±ï¿½Å£ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¼ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªISBNï¿½ï¿½
+    Libaray() {
+    }
 
-    //¶ÔÍ¼ÊéµÄÌí¼Ó
-    public boolean addBook(Books v,Integer n){
-        //ÔÚÌí¼ÓµÄÊ±¼ä±ØĞëÖØĞÂÖ¸ÏòÕâÀï¡£
-        AllISBNIt=machine.keySet().iterator();
-        Book m=v.getBook();
-        while(AllISBNIt.hasNext()){
-            String key=AllISBNIt.next();
-            if(machine.get(key).getBook().equals(m)){
-                machine.get(key).addBook(m,n);
+    //ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public boolean addBook(Books v, Integer n) {
+        //ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+        AllISBNIt = machine.keySet().iterator();
+        Book m = v.getBook();
+        while (AllISBNIt.hasNext()) {
+            String key = AllISBNIt.next();
+            if (machine.get(key).getBook().equals(m)) {
+                machine.get(key).addBook(m, n);
                 return true;
             }
         }
-        //Ã»ÓĞÏàÍ¬µÄÊé¼®£¬Ôò½²Õâ¸öÊé¼®²»ÔÙ½øĞĞ·ÅÈë,Ö»ÊÇÈ¥Ôö¼ÓÊé¼®µÄ¸öÊı£¬²¢²»ÊÇÈ¥Ìí¼ÓÊé¼®£¡
+        //Ã»ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½Ù½ï¿½ï¿½Ğ·ï¿½ï¿½ï¿½,Ö»ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½
 
         return true;
     }
-    public boolean reduceBook(Books v,int n){
-        //ÔÚÌí¼ÓµÄÊ±¼ä±ØĞëÖØĞÂÖ¸ÏòÕâÀï¡£
-        AllISBNIt=machine.keySet().iterator();
-        Book m=v.getBook();
-        while(AllISBNIt.hasNext()){
-            String key=AllISBNIt.next();
-            if(machine.get(key).getBook().equals(m)){
+
+    public boolean reduceBook(Books v, int n) {
+        //ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+        AllISBNIt = machine.keySet().iterator();
+        Book m = v.getBook();
+        while (AllISBNIt.hasNext()) {
+            String key = AllISBNIt.next();
+            if (machine.get(key).getBook().equals(m)) {
 //                if(machine.get(key).number<=n){
-////                    AllISBNIt.remove();//Ö±½ÓÒÆ³ıÌí¼ÓÊé¼®µÄÖÖÀà£¬È«²¿É¾³ı
+////                    AllISBNIt.remove();//Ö±ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½à£¬È«ï¿½ï¿½É¾ï¿½ï¿½
 //                }else
-                machine.get(key).reduBook(m,n);//Èç¹ûÉ¾³ıµÄ²»¹»¶àµÄÊ±¼ä½«£¬Êé¼®Ã»ÓĞ±»½è³öµÄÉ¾³ı
+                machine.get(key).reduBook(m, n);//ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä½«ï¿½ï¿½ï¿½é¼®Ã»ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
                 return true;
             }
         }
-        return false;//Ã»ÓĞ´ËÊé
+        return false;//Ã»ï¿½Ğ´ï¿½ï¿½ï¿½
     }
-    //Í¼Êé¹İµÄÊé¼®ĞÅÏ¢µÄ²éÑ¯
-    public boolean findBasedTitle(String title){
-        //ÔÚÌí¼ÓµÄÊ±¼ä±ØĞëÖØĞÂÖ¸ÏòÕâÀï¡£
-        AllISBNIt=machine.keySet().iterator();
-        boolean exited=false;
-        while(AllISBNIt.hasNext()){
-            String key=AllISBNIt.next();
-            if(machine.get(key).getTitle().equals(title)){
+
+    //Í¼ï¿½ï¿½İµï¿½ï¿½é¼®ï¿½ï¿½Ï¢ï¿½Ä²ï¿½Ñ¯
+    public boolean findBasedTitle(String title) {
+        //ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+        AllISBNIt = machine.keySet().iterator();
+        boolean exited = false;
+        while (AllISBNIt.hasNext()) {
+            String key = AllISBNIt.next();
+            if (machine.get(key).getTitle().equals(title)) {
                 System.out.println(machine.get(key));
-                exited=true;
+                exited = true;
             }
         }
-        //Ã»ÓĞÕÒ¼ûµÄÊ±¼ä·µ»Øfalse
-        if(exited)return true;
+        //Ã»ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½Ê±ï¿½ä·µï¿½ï¿½false
+        if (exited) return true;
         System.out.println("NULL");
         return false;
     }
-    //²éÑ¯Êé¼®ÒÀÕÕ
-    public boolean findBasedPublish(String  publish){
-        //ÔÚÌí¼ÓµÄÊ±¼ä±ØĞëÖØĞÂÖ¸ÏòÕâÀï¡£
-        AllISBNIt=machine.keySet().iterator();
-        boolean exited=false;
-        while(AllISBNIt.hasNext()){
-            String key=AllISBNIt.next();
 
-            if(machine.get(key).getPublish().equals(publish)){
+    //ï¿½ï¿½Ñ¯ï¿½é¼®ï¿½ï¿½ï¿½ï¿½
+    public boolean findBasedPublish(String publish) {
+        //ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+        AllISBNIt = machine.keySet().iterator();
+        boolean exited = false;
+        while (AllISBNIt.hasNext()) {
+            String key = AllISBNIt.next();
+
+            if (machine.get(key).getPublish().equals(publish)) {
                 System.out.println(machine.get(key));
-                exited=true;
+                exited = true;
             }
         }
-        //Ã»ÓĞÕÒ¼ûµÄÊ±¼ä·µ»Øfalse
-        if(exited) return true;  System.out.println("NULL");
+        //Ã»ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½Ê±ï¿½ä·µï¿½ï¿½false
+        if (exited) return true;
+        System.out.println("NULL");
         return false;
     }
-    //²éÑ¯Êé¼®ÒÀÕÕ×÷Õß£¬
-    public boolean findBasedAuthor(String author){
-        //ÔÚÌí¼ÓµÄÊ±¼ä±ØĞëÖØĞÂÖ¸ÏòÕâÀï¡£
-        AllISBNIt=machine.keySet().iterator();
-        boolean exited=false;
-        while(AllISBNIt.hasNext()){
-            String key=AllISBNIt.next();
-            String [] a=machine.get(key).getArrayAuthors();
-             for(String c:a){
-                 if(c.equals(author)) {
-                     System.out.println(machine.get(key)); exited=true;
-                 break;
-                 }
-             }
+
+    //ï¿½ï¿½Ñ¯ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½
+    public boolean findBasedAuthor(String author) {
+        //ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¡£
+        AllISBNIt = machine.keySet().iterator();
+        boolean exited = false;
+        while (AllISBNIt.hasNext()) {
+            String key = AllISBNIt.next();
+            String[] a = machine.get(key).getArrayAuthors();
+            for (String c : a) {
+                if (c.equals(author)) {
+                    System.out.println(machine.get(key));
+                    exited = true;
+                    break;
+                }
+            }
         }
-        //Ã»ÓĞÕÒ¼ûµÄÊ±¼ä·µ»Øfalse
-        if(exited) return true;  System.out.println("NULL");
+        //Ã»ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½Ê±ï¿½ä·µï¿½ï¿½false
+        if (exited) return true;
+        System.out.println("NULL");
         return false;
     }
-//    //Í¼Êé½èÔÄ¹¦ÄÜ
+//    //Í¼ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
 //    public
 }

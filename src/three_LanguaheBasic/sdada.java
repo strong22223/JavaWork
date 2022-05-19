@@ -2,14 +2,14 @@ package three_LanguaheBasic;
 
 public class sdada {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String []i= {"Ò»","¶ş","Èı","ËÄ","Îå","Áù"};
-		for(String S:i)
-			System.out.printf("%-3s",S);
-		System .out.println();
-		for(int j=0;j<20;j++)
-			System.out.printf("%-3s","12");
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String[] i = {"Ò»", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½"};
+        for (String S : i)
+            System.out.printf("%-3s", S);
+        System.out.println();
+        for (int j = 0; j < 20; j++)
+            System.out.printf("%-3s", "12");
 
-	}
+    }
 }

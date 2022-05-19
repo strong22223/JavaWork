@@ -1,73 +1,71 @@
 package Forth_JavaoopCharacter;
 
-import three_LanguaheBasic.C;
-
 public class Test {
 
-	public static void main(String[] args) {
-		MyNaturalNumbers x=new MyNaturalNumbers("7867");
-		MyNaturalNumbers y=new MyNaturalNumbers("7867312");
-		MyNaturalNumbers z=new MyNaturalNumbers();
-		System.out.println(z.subtraction(x,y));
+    public static void main(String[] args) {
+        MyNaturalNumbers x = new MyNaturalNumbers("7867");
+        MyNaturalNumbers y = new MyNaturalNumbers("7867312");
+        MyNaturalNumbers z = new MyNaturalNumbers();
+        System.out.println(z.subtraction(x, y));
 
 //
-//		//²âÊÔÊı¾İµÄÁ½ÖÖÊäÈë½á¹û
-//		/*	Ò».²âÊÔÊäÈë
-//		 * 		1.µÚÒ»ÖÖÊÇµ÷ÓÃinput()·½·¨½øĞĞÊäÈë
-//		 * 		2.µÚ¶şÖÖÊÇÔÚ¹¹Ôì·½·¨ÖĞÊäÈëÕâ¸öÊı×Ö
-//		 * 		3.µÚÈıÖÖÕıÈ·µÄ½ÓÊÜÇ§·ÖÎ»µÄÊı×Ö
-//		 * 		3.·Ö±ğÊä³öÕâÁ½¸öÊı×Ö
+//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		/*	Ò».ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		 * 		1.ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½input()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		 * 		2.ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		 * 		3.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ä½ï¿½ï¿½ï¿½Ç§ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		 * 		3.ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //		 * */
 //		MyInteger aInteger =new MyInteger("456776543456");
 //		MyInteger bInteger =new MyInteger("-12356");
 //		MyInteger cInteger =new MyInteger();
-//		//aInteger.input();//ÊäÈëaInteger
-//		System .out .print("1.Êä³ö²âÊÔ:\n");
+//		//aInteger.input();//ï¿½ï¿½ï¿½ï¿½aInteger
+//		System .out .print("1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:\n");
 //		aInteger .output();
 //		bInteger .output();
 //	//	cInteger .output();
-//			//MyintegerµÄÊôĞÔ²âÊÔ!
+//			//Myintegerï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½!
 //		/*
-//		 * 		1.Êı×ÖµÄ³¤¶È
-//		 * 		2¡£Êı×ÖµÄÕı¸º£¨Ê¹ÓÃflagÀ´È·¶¨£¬1´ú±íÊı×ÖÎªÕı£¬-1´ú±íÊı×ÖÎª¸ºÊı
+//		 * 		1.ï¿½ï¿½ï¿½ÖµÄ³ï¿½ï¿½ï¿½
+//		 * 		2ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½flagï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
 //		 *
 //		 * */
-//		System .out .println("2.aµÄ³¤¶È£º"+aInteger .length+"  bµÄ³¤¶È:"+bInteger .length  );
-//		System .out .println("3.¡¶1´ú±íÕıÊı£¬-1´ú±í¸ºÊı¡·\n"+"aÊı×ÖÎª£º"+aInteger .flag +" bÊı×ÖÎª "+bInteger .flag );
+//		System .out .println("2.aï¿½Ä³ï¿½ï¿½È£ï¿½"+aInteger .length+"  bï¿½Ä³ï¿½ï¿½ï¿½:"+bInteger .length  );
+//		System .out .println("3.ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n"+"aï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½"+aInteger .flag +" bï¿½ï¿½ï¿½ï¿½Îª "+bInteger .flag );
 //		/*
-//		 * MyIntegerµÄ·½·¨²âÊÔ
-//		 * 		1.¼Ó·¨
-//		 * 		2.¼õ·¨
-//		 * 		3.CInteger×÷Îª½á¹û½ÓÊÜ£¬²¢ÇÒ½«ÆäÊä³ö||»òÕßµ÷ÓÃcIntegerµÄoutput·½·¨½«ÆäÊä³ö
+//		 * MyIntegerï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		 * 		1.ï¿½Ó·ï¿½
+//		 * 		2.ï¿½ï¿½ï¿½ï¿½
+//		 * 		3.CIntegerï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ò½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½||ï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½cIntegerï¿½ï¿½outputï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //		 * 		4.
 //		 */
 //
-//		System .out .println("4.¼Ó·¨½á¹ûÊÇ£º"+cInteger .addition(aInteger, bInteger));
+//		System .out .println("4.ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+cInteger .addition(aInteger, bInteger));
 //		aInteger .set("-1234567");bInteger .set("-12345");
-//		System .out .println("-1234567¼Ó-12345µÄ½á¹û£º"+cInteger .addition(aInteger, bInteger));
+//		System .out .println("-1234567ï¿½ï¿½-12345ï¿½Ä½ï¿½ï¿½ï¿½ï¿½"+cInteger .addition(aInteger, bInteger));
 //
 //
-//		System.out.println("5.¼õ·¨½á¹ûÊÇ£º"+cInteger .subtraction(aInteger, bInteger));
+//		System.out.println("5.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+cInteger .subtraction(aInteger, bInteger));
 //		aInteger .set("121313");
 //
-//		System .out .println("6.ÖØĞÂ¸³ÖµºóµÄInterger:"+aInteger );
+//		System .out .println("6.ï¿½ï¿½ï¿½Â¸ï¿½Öµï¿½ï¿½ï¿½Interger:"+aInteger );
 //
-//		System .out .println("7.aIntergerºÍbIntergerµÄ±È½Ï:"+aInteger .equals(bInteger ));
+//		System .out .println("7.aIntergerï¿½ï¿½bIntergerï¿½Ä±È½ï¿½:"+aInteger .equals(bInteger ));
 //
-//		System .out.println("8.aIntergerÊı×Ö×ª»»ÎªStringºóÊä³ö:"+aInteger .toString());
+//		System .out.println("8.aIntergerï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ÎªStringï¿½ï¿½ï¿½ï¿½ï¿½:"+aInteger .toString());
 //
-//		//²âÊÔ×ÔÈ»Êı×ª»»ÎªÍ¬ÊıÖµµÄMyterger
+//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½×ªï¿½ï¿½ÎªÍ¬ï¿½ï¿½Öµï¿½ï¿½Myterger
 //		MyNaturalNumbers cMyNaturalNumbers =new MyNaturalNumbers("9999999");
 //		MyInteger zzInteger=cMyNaturalNumbers.toMyInteger ();
-//		System .out .print("9.²âÊÔÊä³öMynarturalNumbers×ª»»ÎªMyinter" );
+//		System .out .print("9.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MynarturalNumbers×ªï¿½ï¿½ÎªMyinter" );
 //		zzInteger.output();
 //
-		/*
-		 * 	²âÊÔÎŞĞ§Êı¾İµÄÊäÈë
-		 * 	1.Ç§·ÖÎ»´íÎó
-		 */
-		//aInteger .set("12,332,23");//Ç§·ÖÎ»´íÎóÊ¾Àı
-		//cMyNaturalNumbers .set("-1213");//×ÔÈ»Êı´íÎóÊ¾Àı
-	}
+        /*
+         * 	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½
+         * 	1.Ç§ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½
+         */
+        //aInteger .set("12,332,23");//Ç§ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+        //cMyNaturalNumbers .set("-1213");//ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+    }
 
 }

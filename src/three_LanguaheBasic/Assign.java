@@ -1,43 +1,43 @@
 package three_LanguaheBasic;
 
-public class  Assign {
-	int x,y;
-	public static void main(String args[]) {
-					// ÉùÃ÷ÕûÐÍ±äÁ¿
-		Assign assign=new Assign();
-	
-		float z = 3.414f; 		// ÉùÃ÷²¢¸³ÖµfloatÐÍ±äÁ¿
-		double w = 3.1415; 	// ÉùÃ÷²¢¸³ÖµdoubleÐÍ±äÁ¿
-		//	System .out .print("x="+x+"y="+y+"z="+z+"w="+w);
-		boolean truth = true; 	// ÉùÃ÷²¢¸³ÖµbooleanÐÍ±äÁ¿
-		char c; 			// ÉùÃ÷×Ö·û±äÁ¿
-		String str; 		// ÉùÃ÷StringÀàÐÍ±äÁ¿
-		String str1 = "bye";	// ÉùÃ÷²¢¸³ÖµStringÀàÐÍ±äÁ¿
-		//	x = 6;
-		//	y = 1000; 		// ¸øintÐÍ±äÁ¿¸³Öµ
-		//System .out .print("x="+x+" y="+y+" z="+z+" w="+w);
-		c = 'A'; 			// ¸ø×Ö·û±äÁ¿¸³Öµ
-	//	System .out .print("str="+str+" str1="+str1);
-		str = "Hi out there"; 	// ¸øString±äÁ¿¸³Öµ	
-		System.out .print("x="+assign.x +" y="+assign .y+" str="+str+" str1="+str1);
-		System .out.println();
-		System .out .println(12.3+"\n"+12.3e+2+"\n"+23.4e-2+"\r"+-334.4+"\n"+20+"\n"+39F+"\n"+40D);
-		System .out .println("³ýÁË20²»ÊÇ¸¡µãÊýÆäËû¶¼ÊÇ£¡");
-		
-		System .out.println(0.0==-0.0);
-		System .out.println(0.0>-0.0);
-		System .out.println("======================\n"+(1.0>Double .NaN ));
-		System .out.println(1.0<Double .NaN );
-		System .out.println(1.0==Double .NaN );
-		System .out.println(1.0!=Double .NaN );
-		System .out.println(Double .NaN ==Double .NaN );
-		System .out.println(0.0/0.0);//NAN·ÇÊý
-		System .out.println(1.0/0.0);//ÎÞÏÞ
-		System .out.println(1.0/-0.0);
-		System .out.println((1.0/-0.0)*0);//·ÇÊýNAN
+public class Assign {
+    int x, y;
 
-		
-		
-	}
+    public static void main(String args[]) {
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½
+        Assign assign = new Assign();
+
+        float z = 3.414f;        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµfloatï¿½Í±ï¿½ï¿½ï¿½
+        double w = 3.1415;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµdoubleï¿½Í±ï¿½ï¿½ï¿½
+        //	System .out .print("x="+x+"y="+y+"z="+z+"w="+w);
+        boolean truth = true;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµbooleanï¿½Í±ï¿½ï¿½ï¿½
+        char c;            // ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
+        String str;        // ï¿½ï¿½ï¿½ï¿½Stringï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½
+        String str1 = "bye";    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµStringï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½
+        //	x = 6;
+        //	y = 1000; 		// ï¿½ï¿½intï¿½Í±ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        //System .out .print("x="+x+" y="+y+" z="+z+" w="+w);
+        c = 'A';            // ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        //	System .out .print("str="+str+" str1="+str1);
+        str = "Hi out there";    // ï¿½ï¿½Stringï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        System.out.print("x=" + assign.x + " y=" + assign.y + " str=" + str + " str1=" + str1);
+        System.out.println();
+        System.out.println(12.3 + "\n" + 12.3e+2 + "\n" + 23.4e-2 + "\r" + -334.4 + "\n" + 20 + "\n" + 39F + "\n" + 40D);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½20ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½");
+
+        System.out.println(0.0 == -0.0);
+        System.out.println(0.0 > -0.0);
+        System.out.println("======================\n" + (1.0 > Double.NaN));
+        System.out.println(1.0 < Double.NaN);
+        System.out.println(1.0 == Double.NaN);
+        System.out.println(1.0 != Double.NaN);
+        System.out.println(Double.NaN == Double.NaN);
+        System.out.println(0.0 / 0.0);//NANï¿½ï¿½ï¿½ï¿½
+        System.out.println(1.0 / 0.0);//ï¿½ï¿½ï¿½ï¿½
+        System.out.println(1.0 / -0.0);
+        System.out.println((1.0 / -0.0) * 0);//ï¿½ï¿½ï¿½ï¿½NAN
+
+
+    }
 }
  

@@ -2,29 +2,39 @@ package Forth_JavaoopCharacter;
 
 public class P72_constructorOverloading {
 
-	 
-		public static void main(String[] args){
-			Student stu=new Student();
-			System.out.println(stu.getName()+", "+stu.getID());
-		}
-	}
-	class Student{
-		private String name;
-		private String id;
-		public Student(String nm, String id){
-		
-			this.name=nm;
-			this.id=id;
-		}
-		public Student(String nm){
-			//String string="as";ÔÚ¹¹Ôì·½·¨ÖÐµ÷ÓÃÁíÍâÒ»¸ö¹¹Ôì·½·¨µÄÊ±¼ä£¬±ØÐëÊ¹ÓÃthis£¬±È¹ØÇÐ·ÅÔÚÊ×ÐÐ£¡£¡
-			this(nm,"00000000");
-		}
-		public Student(){
-			//int a;
-			this("Unknown");
-		}
-		public String getName(){ return name; }
-		public String getID(){ return id; }
-	}
+
+    public static void main(String[] args) {
+        Student stu = new Student();
+        System.out.println(stu.getName() + ", " + stu.getID());
+    }
+}
+
+class Student {
+    private String name;
+    private String id;
+
+    public Student(String nm, String id) {
+
+        this.name = nm;
+        this.id = id;
+    }
+
+    public Student(String nm) {
+        //String string="as";ï¿½Ú¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½thisï¿½ï¿½ï¿½È¹ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½
+        this(nm, "00000000");
+    }
+
+    public Student() {
+        //int a;
+        this("Unknown");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getID() {
+        return id;
+    }
+}
 

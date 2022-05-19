@@ -1,34 +1,40 @@
 package Forth_JavaoopCharacter;
-class Base{
-	public static int i=100;
-	public void increase(){
-		i++ ;
-	}
-	public static int getI(){
-		return i;
-	}
+
+class Base {
+    public static int i = 100;
+
+    public static int getI() {
+        return i;
+    }
+
+    public void increase() {
+        i++;
+    }
 }
 
-public class P77_NotOverriding extends Base{
-	public static int i=5;
-	public static int getI() {
-		return i;
-	}
-	public void increase(){
-		this.i=99;
-		String string="sds";
-	}
-	public static void main(String[] args){
-		P77_NotOverriding no=new P77_NotOverriding();
-		//no.increase();//µ÷ÓÃ¸¸ÀàµÄ£¬ÒòÎª×ÓÀàÃ»ÓÐ£¬½«¸¸ÀàÖÐµÄi×ÔÔö±äÎª101£¬¶ø×ÓÀàÖÐµÄi±äÁ¿ÊÇÃ»ÓÐ·¢Éú±ä»¯µÄ
-		
-		System.out.println(no .i);
-		System.out.println(no .getI());
-		//½«×ÓÀàµÄ¶ÔÏóÇ¿ÖÆ×¼»»Îª¸¸Àà¶ÔÏó£¬ËùÓÐµÄµ÷ÓÃ¶¼ÊÇ¸¸Àà???
-		Base cBase=no;//ÏòÉÏÔìÐÍ£¬×ÓÀàÖÐÌØÓÐµÄ¶«Î÷±»Òþ²Ø£¬µ«ÊÇ¼Ì³ÐµÄ¶«Î÷½«Ê¹ÓÃ×ÓÀàµÄ·½·¨
-		cBase.increase();//±»¸²¸ÇµÄ×ÓÀà
-		System.out.println(cBase .i);//·ÃÎÊµÄÊÇ¸¸ÀàÖÐ±»Òþ²ØµÄÊôÐÔ
-		System.out.println(cBase .getI());//±»¸²¸ÇµÄ·½·¨·ÃÎÊµÄÊÇ×ÓÀàµÄ
-		System.out.println(no .getI());
-	}
+public class P77_NotOverriding extends Base {
+    public static int i = 5;
+
+    public static int getI() {
+        return i;
+    }
+
+    public static void main(String[] args) {
+        P77_NotOverriding no = new P77_NotOverriding();
+        //no.increase();//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª101ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ä»¯ï¿½ï¿½
+
+        System.out.println(no.i);
+        System.out.println(no.getI());
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½×¼ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄµï¿½ï¿½Ã¶ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½???
+        Base cBase = no;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ç¼Ì³ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+        cBase.increase();//ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println(cBase.i);//ï¿½ï¿½ï¿½Êµï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println(cBase.getI());//ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println(no.getI());
+    }
+
+    public void increase() {
+        this.i = 99;
+        String string = "sds";
+    }
 }

@@ -2,30 +2,33 @@ package Five_Java_High_Level_Language_features;
 
 class Poppet {
     private int i;
-    Poppet(int ii) { i = ii; }
+
+    Poppet(int ii) {
+        i = ii;
+    }
 }
+
 public class P31_BlankFinal {
-    private final int i = 0; 	// ±»³õÊ¼»¯µÄfinal
-    private final int j; 	// ¿Õ°×final
-    private final Poppet p; 	// ¿Õ°×finalÒýÓÃ
+    private final int i = 0;    // ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½final
+    private final int j;    // ï¿½Õ°ï¿½final
+    private final Poppet p;    // ï¿½Õ°ï¿½finalï¿½ï¿½ï¿½ï¿½
+
     public P31_BlankFinal() {
         Poppet p1;
-        j = 1; 			// ³õÊ¼»¯¿Õ°×final
-        p = new Poppet(1); 	// ³õÊ¼»¯¿Õ°×finalÒýÓÃ
+        j = 1;            // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Õ°ï¿½final
+        p = new Poppet(1);    // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Õ°ï¿½finalï¿½ï¿½ï¿½ï¿½
 //      p=new Poppet(3);
     }
+
     public P31_BlankFinal(int x) {
-        j = x; 			// ³õÊ¼»¯¿Õ°×final
-        p = new Poppet(x); 	// ³õÊ¼»¯¿Õ°×finalÒýÓÃ
+        j = x;            // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Õ°ï¿½final
+        p = new Poppet(x);    // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Õ°ï¿½finalï¿½ï¿½ï¿½ï¿½
     }
+
     public static void main(String[] args) {
 //        new P31_BlankFinal();
 //        new P31_BlankFinal(47);
 
 
-
-
-
-
     }
-}		// ÓÖÀý£ºCustomer.java
+}        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Customer.java

@@ -1,37 +1,45 @@
 package Forth_JavaoopCharacter;
 
 class Window {
-	Window(int m) { System.out.println("window " + m); }
+    Window(int m) {
+        System.out.println("window " + m);
+    }
 }
+
 class House {
-	
-	String dDString="ssss";
-	int a;
-	static int m=99;
-	Window w1 = new Window(1);
-	House() { 
-		System.out.println("House");
-		w3 = new Window(33);
-	}
-	Window w2 = new Window(2);
-	void f() { System.out.println("¸¸Ààf()"); }
-	Window w3 = new Window(3);
-	int c;
+
+    static int m = 99;
+    String dDString = "ssss";
+    int a;
+    Window w1 = new Window(1);
+    Window w2 = new Window(2);
+    Window w3 = new Window(3);
+    int c;
+
+    House() {
+        System.out.println("House");
+        w3 = new Window(33);
+    }
+
+    void f() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½f()");
+    }
 }
-class Houses extends House{
-	char x;
-	static int s;
-	 Houses(){
-		 
-	//	super();
-	}
-	
-	int v;
-	String vvString="×ÓÀà";
+
+class Houses extends House {
+    static int s;
+    char x;
+    int v;
+    String vvString = "ï¿½ï¿½ï¿½ï¿½";
+    Houses() {
+
+        //	super();
+    }
 }
+
 public class P51_OrderOfInit {
-	public static void main(String[] args) {
-		House h = new Houses();
-		h.f();
-	}
+    public static void main(String[] args) {
+        House h = new Houses();
+        h.f();
+    }
 }

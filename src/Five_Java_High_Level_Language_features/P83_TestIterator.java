@@ -1,26 +1,28 @@
 package Five_Java_High_Level_Language_features;
-import java.util.*;
-public class P83_TestIterator{
-    public static void main(String[] args){
-        String sentence="I believe I can fly, I believe I can touch the sky.";
-     //Í¨¹ýÒ»¸ö»òÕß¶à¸ö·Ö¸ô·û½«Ô­À´µÄ×Ö·û´®£¬·Ö¸îÎª×Ö·û´®Êý×é
-        String[] strs=sentence.split(" ");
-        //ÔÚ¹¹Ôì·½·¨ÖÐ´´½¨ÁËÒ»¸öListµÄ¼¯ºÏ
-        List<String> list=new ArrayList<String>( Arrays.asList(strs) );
 
-        Iterator<String> it=list.iterator();
-        //É¾³ýµ±Ç°±éÀúµ½µÄÔªËØ
+import java.util.*;
+
+public class P83_TestIterator {
+    public static void main(String[] args) {
+        String sentence = "I believe I can fly, I believe I can touch the sky.";
+        //Í¨ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        String[] strs = sentence.split(" ");
+        //ï¿½Ú¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Listï¿½Ä¼ï¿½ï¿½ï¿½
+        List<String> list = new ArrayList<String>(Arrays.asList(strs));
+
+        Iterator<String> it = list.iterator();
+        //É¾ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
         it.next();
         it.remove();
         System.out.println(list);
-        //²éÑ¯ÔªËØµÄË÷Òý,Ö»ÓÐÔÚListIterator
-        ListIterator<String> v= list.listIterator();
+        //ï¿½ï¿½Ñ¯Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½,Ö»ï¿½ï¿½ï¿½ï¿½ListIterator
+        ListIterator<String> v = list.listIterator();
         System.out.println(v.nextIndex());
-        //ÐÞ¸Äµ±Ç°²éÑ¯µ½µÄÔªËØµÄÖµ
+        //ï¿½Þ¸Äµï¿½Ç°ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½Öµ
         v.next();
         v.set("32");
         System.out.println(list);
-       // v.next();
+        // v.next();
         v.add("666");
         System.out.println(list);
 

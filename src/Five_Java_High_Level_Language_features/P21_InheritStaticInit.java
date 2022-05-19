@@ -1,20 +1,34 @@
 package Five_Java_High_Level_Language_features;
 
-    class T1 {
-        String c="Àà¼ÓÔØµÄÊ±¼ä²»»á¶ÔÆÕÍ¨±äÁ¿½øÐÐ²Ù×÷";
-        static int s1 = 1;
-        static { System.out.println("static block of T1: " + T2.s2); }
-        T1() { System.out.println("T1(): " + s1); }
-    }
-    class T2 extends T1 {
-        static int s2 = 2;
-        static { System.out.println("static block of T2: " + T2.s2); }
-        T2() { System.out.println("T2(): " + s2); }
+class T1 {
+    static int s1 = 1;
+
+    static {
+        System.out.println("static block of T1: " + T2.s2);
     }
 
+    String c = "ï¿½ï¿½ï¿½ï¿½Øµï¿½Ê±ï¿½ä²»ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½";
+
+    T1() {
+        System.out.println("T1(): " + s1);
+    }
+}
+
+class T2 extends T1 {
+    static int s2 = 2;
+
+    static {
+        System.out.println("static block of T2: " + T2.s2);
+    }
+
+    T2() {
+        System.out.println("T2(): " + s2);
+    }
+}
+
 public class P21_InheritStaticInit {
-        public static void main(String[] args) {
-            new T2();
+    public static void main(String[] args) {
+        new T2();
 
     }
 

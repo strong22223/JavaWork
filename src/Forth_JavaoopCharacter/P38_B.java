@@ -1,29 +1,30 @@
 package Forth_JavaoopCharacter;
-import three_LanguaheBasic.*;
- 
-import static java.lang.Math.PI; 
-class ASub extends A{
-	void mtd (ASub sub) {
-	 func();
+
+import three_LanguaheBasic.A;
+
+class ASub extends A {
+    void mtd(ASub sub) {
+        func();
 //	 A cA=new A();
-	// cA.func();
-		//parentA .func();
-		sub.func();
-	}
+        // cA.func();
+        //parentA .func();
+        sub.func();
+    }
 }
+
 public class P38_B extends ASub {
-//包的相关问题，引入其他类的静态成员Static final 常量或者static方法
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		A objA=new A();//A为three_LanguageBasic中的public类，所以在Torth包中的所有人都可以访问他
-	//	A obA =new A("sds");
-		P38_B p38_B=new P38_B();
-		 //声明并且创建一个内部类，必须在创建外包类之后才能够在去实力话内部类。
-		ASub i=new ASub();
-		//objA.func();A类的protected方法不能在
-		i.func();
-		
-	}
- 
+    //锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷猓拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥撅拷态锟斤拷员Static final 锟斤拷锟斤拷锟斤拷锟斤拷static锟斤拷锟斤拷
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        A objA = new A();//A为three_LanguageBasic锟叫碉拷public锟洁，锟斤拷锟斤拷锟斤拷Torth锟斤拷锟叫碉拷锟斤拷锟斤拷锟剿讹拷锟斤拷锟皆凤拷锟斤拷锟斤拷
+        //	A obA =new A("sds");
+        P38_B p38_B = new P38_B();
+        //锟斤拷锟斤拷锟斤拷锟揭达拷锟斤拷一锟斤拷锟节诧拷锟洁，锟斤拷锟斤拷锟节达拷锟斤拷锟斤拷锟斤拷锟街拷锟斤拷锟杰癸拷锟斤拷去实锟斤拷锟斤拷锟节诧拷锟洁。
+        ASub i = new ASub();
+        //objA.func();A锟斤拷锟絧rotected锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+        i.func();
+
+    }
+
 }
 	

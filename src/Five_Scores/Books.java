@@ -1,76 +1,90 @@
 package Five_Scores;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.ListIterator;
 
 public class Books {
 
-    Books(String title,String publish,String ... authors){
-        this.a.title=title;
-        this.a.publish=publish;
-        this.a.authors= new ArrayList<>(Arrays.asList(authors));
+    //Booksï¿½ï¿½ï¿½ï¿½Í¬ï¿½é¼®ï¿½Ä´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ò»ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬Ö®ï¿½ï¿½Öµï¿½Ç»ï¿½Í¨ï¿½ï¿½
+    ArrayList<Book> books = new ArrayList<>();
+    ListIterator<Book> booksIterator = books.listIterator();
+    int number = books.size();//Í¬Ò»ï¿½ï¿½ï¿½é¼®ï¿½Ä±ï¿½ï¿½ï¿½
+    Book a = new Book();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õºï¿½ï¿½ï¿½Ó¸ï¿½ï¿½é¼®ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+    Books(String title, String publish, String... authors) {
+        this.a.title = title;
+        this.a.publish = publish;
+        this.a.authors = new ArrayList<>(Arrays.asList(authors));
         this.a.number++;
         books.add(a);
-        this.number=books.size();
+        this.number = books.size();
     }
-    //BooksÊÇÏàÍ¬Êé¼®µÄ´æ´¢Æ÷£¬ÓÃÀ´±íÊ¾Ò»ÖÖÊé¼®²»Í¬±¾µÄ¸÷ÖÖ×´Ì¬£¬¶øÕâ¸öÖÖ×´Ì¬Ö®¼äÖµÊÇ»¥Í¨µÄ
-     ArrayList<Book> books=new ArrayList<>();
-    ListIterator<Book> booksIterator=books.listIterator();
-    int number=books.size() ;//Í¬Ò»¸öÊé¼®µÄ±¾Êý
-    Book a=new Book();//´´½¨µÄÕâ¸öÊé¼®µÄÑùÀý£¬ÓÃÓÚÔÚÈÕºóÌí¼Ó¸ÃÊé¼®µÄÊ±¼äÅÐ¶ÏÊÇ·ñÏàµÈ
-    // ·µ»ØÊé¼®,ÓÃÓÚÔÚÌí¼Ó»òÕß¼õÉÙÊé¼®µÄÊ±¼ä×öÅÐ¶ÏÊÇ·ñÊÇÍ¬Ò»±¾Êé¼®
+    // ï¿½ï¿½ï¿½ï¿½ï¿½é¼®,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½é¼®
 
     /*
-    ÖØÐ´booksµÄTOString·½·¨£¬±£ÕÏÔÚÊä³öÕâ¸öÊé¼®µÄÊ±¼ä£¬½«ËûµÄÊé¼®ÐÅÏ¢ºÍ¹Ý²ØÊýÈ«²¿Êä³ö
-    Èç¹ûÔÙÏëÒªÈ¥²éÑ¯Êé¼®µÄÊ±¼ä²éÑ¯µ½µÄÊÇÃ¿Ò»¸ö¾ßÌåµÄÊé¼®µÄ×´Ì¬£¬½«´Ë·½·¨¸ÄÐ´
+    ï¿½ï¿½Ð´booksï¿½ï¿½TOStringï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ï¢ï¿½Í¹Ý²ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¥ï¿½ï¿½Ñ¯ï¿½é¼®ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
      */
     @Override
-    public String toString(){
-        Book temp=this.getBook();
-        StringBuilder a= new StringBuilder();
-        String title=temp.getTitle();
-        String publish=temp.getPublish();
-        String  authors= temp.getAuthors();
+    public String toString() {
+        Book temp = this.getBook();
+        StringBuilder a = new StringBuilder();
+        String title = temp.getTitle();
+        String publish = temp.getPublish();
+        String authors = temp.getAuthors();
 
-        return "ÊéÃû:¡¶"+title+"¡·\n³ö°æÉç:"+publish+"\n×÷Õß:" +authors+"\n¹Ý²ØÊý:"+this.number;
+        return "ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½" + title + "ï¿½ï¿½\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:" + publish + "\nï¿½ï¿½ï¿½ï¿½:" + authors + "\nï¿½Ý²ï¿½ï¿½ï¿½:" + this.number;
     }
-    public Book getBook(){
+
+    public Book getBook() {
         return books.get(0);
     }
-    public  boolean addBook(Book n,int m){
-        while(m--!=0)
-        books.add(n);
-        number=books.size();
+
+    public boolean addBook(Book n, int m) {
+        while (m-- != 0)
+            books.add(n);
+        number = books.size();
         return true;
     }
-    public boolean reduBook(Book n,int m){
-        booksIterator=books.listIterator();
-        while(booksIterator.hasNext()&&m!=0){
-            if(booksIterator.next().inLibrary){
-                booksIterator.remove();m--;//¼õÉÙÊé¼®£¬ÔÚÊé¼®ÔÚ¹ÝµÄÊ±¼äÊ±¼ä½«Ëû¼õÉÙ
-            }else{ }
+
+    public boolean reduBook(Book n, int m) {
+        booksIterator = books.listIterator();
+        while (booksIterator.hasNext() && m != 0) {
+            if (booksIterator.next().inLibrary) {
+                booksIterator.remove();
+                m--;//ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½Ú¹Ýµï¿½Ê±ï¿½ï¿½Ê±ï¿½ä½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            } else {
+            }
         }
-        this.number=books.size();//½«Æä³¤¶È
-        if(m!=0){System.out.println("Ê£Óà"+m+"¸öÃ»ÓÐÒÆ³ý£¬ÒÑ±»½è³ö£¡");return false;}
-        return true ;
+        this.number = books.size();//ï¿½ï¿½ï¿½ä³¤ï¿½ï¿½
+        if (m != 0) {
+            System.out.println("Ê£ï¿½ï¿½" + m + "ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Æ³ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+            return false;
+        }
+        return true;
     }
-    //µÃµ½ÊéÃû
-    public String getTitle(){
+
+    //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
+    public String getTitle() {
         return books.get(0).getTitle();
     }
-    //µÃµ½×÷ÕßÃû
-    public String getPublish(){
+
+    //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public String getPublish() {
         return books.get(0).getPublish();
     }
-    //µÃµ½×÷ÕßÃû
-    public String getAuthors(){
+
+    //ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public String getAuthors() {
         return books.get(0).getAuthors();
     }
-    public String []getArrayAuthors(){
+
+    public String[] getArrayAuthors() {
         return books.get(0).getArrayAuthors();
     }
 //    public static void main(String args[]){
-//        Books one=new Books("ÀÏÈËÓëº£","±±¾©","ÍõÎå","Àî»ª");
+//        Books one=new Books("ï¿½ï¿½ï¿½ï¿½ï¿½ëº£","ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½","ï¿½î»ª");
 //        System.out.println(one.books);
 //    }
 }

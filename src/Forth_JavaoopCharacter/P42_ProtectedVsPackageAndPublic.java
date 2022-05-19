@@ -1,40 +1,41 @@
 package Forth_JavaoopCharacter;
 
-import java.net.http.HttpResponse.BodySubscriber;
-
 import three_LanguaheBasic.C;
 
 public class P42_ProtectedVsPackageAndPublic {
 
-		public static void main(String[] args){
+    public static void main(String[] args) {
 //			C obj=new C();
-//			// obj.func();	//²»ÊÇCµÄ×ÓÀà£¬ÇÒÓëC·ÇÍ¬Ò»¸ö°ü
+//			// obj.func();	//ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½
 //	         obj = new CSub(); ((CSub)obj).func();
-	         CSub sub= new CSub();
-	         sub.mtd();
-	        // sub.func();
-	         //((CSub)obj).mtd(obj, (CSub)obj);   // obj.mtd(obj, obj);
-			//obj.mtd(obj, obj);
-			//CSub bCSub= new CSub();
-			//bCSub .mtd(obj, bCSub);
-			//bCSub .c();
-		}
-	}
-	class CSub extends C{		
-		//CµÄ×ÓÀà£¬¿ÉÒÔ·ÃÎÊCµÄfunc()·½·¨
-		 
-		private void c() {
-			System .out .println("¿ÉÒÔ");
-		}
-		void mtd(){
-			C obj=new C();
-			// obj.func();	//²»ÊÇCµÄ×ÓÀà£¬ÇÒÓëC·ÇÍ¬Ò»¸ö°ü
-	         obj = new CSub(); ((CSub)obj).func();
-			func();
-			 //parent.func();      //²»ÊÇCµÄ×ÓÀà£¬ÇÒÓëC·ÇÍ¬Ò»¸ö°ü
-			//sub.func();
-		c();
-		}
-	}
+        CSub sub = new CSub();
+        sub.mtd();
+        // sub.func();
+        //((CSub)obj).mtd(obj, (CSub)obj);   // obj.mtd(obj, obj);
+        //obj.mtd(obj, obj);
+        //CSub bCSub= new CSub();
+        //bCSub .mtd(obj, bCSub);
+        //bCSub .c();
+    }
+}
+
+class CSub extends C {
+    //Cï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½Cï¿½ï¿½func()ï¿½ï¿½ï¿½ï¿½
+
+    private void c() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    void mtd() {
+        C obj = new C();
+        // obj.func();	//ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½
+        obj = new CSub();
+        ((CSub) obj).func();
+        func();
+        //parent.func();      //ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½
+        //sub.func();
+        c();
+    }
+}
 	
 

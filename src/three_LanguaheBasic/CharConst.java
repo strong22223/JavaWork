@@ -1,42 +1,42 @@
 package three_LanguaheBasic;
 
 public class CharConst {
-//ÀàÃûºÍ½Ó¿ÚÃû µÚÒ»¸ö´óÐ´£¬ÇøÓòÈ«²¿Ð¡Ð´
-//±äÁ¿ÃûºÍ·½·¨£¬Ê×µ¥´ÊÐ¡Ð´ÆäÓàµ¥´ÊµÄÊ××ÖÄ¸´óÐ´
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		char c1='Q';
-// =================Unicode±àÂëµÄÈýÖÖÊµÏÖ·½·¨
-		char c2='\u0051';//ËÄÎ»Ê®Áù½øÖÆ
-		char c3=0x0051;//Ê®Áù½øÖÆ
-		char c4='\121';//ÈýÎ»°Ë½øÖÆ
- 
-		System .out .println("c1:"+c1+" c2:"+c2+" c3:"+c3+" c4:"+c4);
-		//×ªÒå×Ö·û
-		//+½«×Ö·û´®Á¬½ÓÆðÀ´£¬Èç¹ûÊÇ×Ö·ûµÄ»°¾Í»á×Ô¶¯×ª»»Îªint
-		System.out.println('\''+"+"+'\\');
-		System.out.println('\''+'\\');
-		//\rÓë\n
-		System.out.print("AAAAAA"+'\r');
-		System.out.print("·Ö¸îÏß==============");
-		System .out .print('\r');
-		System.out.print("AAAAAA"+'\n');
-		System.out.println("·Ö¸îÏß==============");
-		
-		System.out.println("=======================");
-		
-		System.out.print("AAAAAA\n\r");
-		System.out.print("·Ö¸îÏß==============");
-		System .out .print('\r');
-		System.out.print("AAAAAA\r\n");
-		System.out.println("·Ö¸îÏß==============");
-		 
-		System.out.print("123\b4567\b89\b");
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Í½Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Ð¡Ð´
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½ï¿½ï¿½Ð¡Ð´ï¿½ï¿½ï¿½àµ¥ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ð´
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        char c1 = 'Q';
+// =================Unicodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½
+        char c2 = '\u0051';//ï¿½ï¿½Î»Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        char c3 = 0x0051;//Ê®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        char c4 = '\121';//ï¿½ï¿½Î»ï¿½Ë½ï¿½ï¿½ï¿½
+
+        System.out.println("c1:" + c1 + " c2:" + c2 + " c3:" + c3 + " c4:" + c4);
+        //×ªï¿½ï¿½ï¿½Ö·ï¿½
+        //+ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ä»ï¿½ï¿½Í»ï¿½ï¿½Ô¶ï¿½×ªï¿½ï¿½Îªint
+        System.out.println('\'' + "+" + '\\');
+        System.out.println('\'' + '\\');
+        //\rï¿½ï¿½\n
+        System.out.print("AAAAAA" + '\r');
+        System.out.print("ï¿½Ö¸ï¿½ï¿½ï¿½==============");
+        System.out.print('\r');
+        System.out.print("AAAAAA" + '\n');
+        System.out.println("ï¿½Ö¸ï¿½ï¿½ï¿½==============");
+
+        System.out.println("=======================");
+
+        System.out.print("AAAAAA\n\r");
+        System.out.print("ï¿½Ö¸ï¿½ï¿½ï¿½==============");
+        System.out.print('\r');
+        System.out.print("AAAAAA\r\n");
+        System.out.println("ï¿½Ö¸ï¿½ï¿½ï¿½==============");
+
+        System.out.print("123\b4567\b89\b");
 
 
-		System.out.println("\taaaa");
-		System.out.println((int)c1);
-		System.out.println(c1+' ');
-	}
+        System.out.println("\taaaa");
+        System.out.println((int) c1);
+        System.out.println(c1 + ' ');
+    }
 
 }

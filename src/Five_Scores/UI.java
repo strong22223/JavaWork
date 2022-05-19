@@ -1,49 +1,46 @@
 package Five_Scores;
 
-import java.rmi.MarshalledObject;
-
 public class UI {
-    public static void main(String []args){
+    public static void main(String[] args) {
 /*
-        1.ÕûÌåÍ¼Êé¹İµÄ¹¹¼Ü·ÖÎªÔÚ³õÊ¼¿ªÊ¼µÄÎÒÊ±¼äÈ¥Ìí¼ÓÊé¼®µÄÖÖÀà£¬ÔÚÌí¼ÓÍæÊé¼®µÄÖÖÀàÖ®ºó·½±ã¹ÜÀí£¬ÔÚ¿ÉÒÔÌí¼Óµ±Ç°ÖÖÀàÊé¼®µÄ¾ßÌåÊé¼®¡£
-        Ç°Ãæ¶ÔÓ¦µÄÊıÒ»ÖÖÊé¼®µÄ¹İ²ØÂë£¬×÷ÎªÃ¿ÖÖÊé¼®µÄÎ¨Ò»±êÊ¶¡£
-        2.Ìí¼ÓÊé¼®£¬
-        3.É¾³ıÊé¼®
-        4.²éÔÄÊé¼®
+        1.ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½İµÄ¹ï¿½ï¿½Ü·ï¿½Îªï¿½Ú³ï¿½Ê¼ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ó·½±ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½
+        Ç°ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½é¼®ï¿½Ä¹İ²ï¿½ï¿½ë£¬ï¿½ï¿½ÎªÃ¿ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Î¨Ò»ï¿½ï¿½Ê¶ï¿½ï¿½
+        2.ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½
+        3.É¾ï¿½ï¿½ï¿½é¼®
+        4.ï¿½ï¿½ï¿½ï¿½ï¿½é¼®
 
 
  */
-        Libaray c= new Libaray();
-        Books oldMan=new Books("ÀÏÈËÓëº£","Î÷µç³ö°æÉç","ÍõÎå","Àî»ª");
-        Books mouse=new Books("Ã×ÀÏÊó","±±´ó³ö°æÉç","ÀîËÄ","ÀÏÁù");
-        Books zhangSan=new Books("ÕÅÈıµÄÉú»î","Î÷°²³ö°æÉç","ÍõÎå","Àî»ª");
-        //·ÅÈëÊé¼®£¬½«Êé¼®µÄĞÅÏ¢·ÅÈë,Ç°ÃæµÄ±àºÅÏàµ±ÓÚÒ»ÖÖÊéµÄ¹İ²ØÂë
-        c.machine.put( "1",oldMan);
-        c.machine.put( "2",mouse);
-        c.machine.put( "3",zhangSan);
+        Libaray c = new Libaray();
+        Books oldMan = new Books("ï¿½ï¿½ï¿½ï¿½ï¿½ëº£", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½î»ª");
+        Books mouse = new Books("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½");
+        Books zhangSan = new Books("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", "ï¿½î»ª");
+        //ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½,Ç°ï¿½ï¿½Ä±ï¿½ï¿½ï¿½àµ±ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¹İ²ï¿½ï¿½ï¿½
+        c.machine.put("1", oldMan);
+        c.machine.put("2", mouse);
+        c.machine.put("3", zhangSan);
         System.out.println(c.ALLBook);
-        //Ìí¼ÓÊé¼®
-        c.addBook(oldMan,3);
-        c.addBook(mouse,2);
-        c.addBook(zhangSan,9);
-        System.out.println("Ôö¼ÓÊé¼®ºó£º\n"+c.ALLBook);
-        c.reduceBook(oldMan,2);
-        System.out.println("É¾³ıÊé¼®ºó£º\n"+c.ALLBook);
+        //ï¿½ï¿½ï¿½ï¿½é¼®
+        c.addBook(oldMan, 3);
+        c.addBook(mouse, 2);
+        c.addBook(zhangSan, 9);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½\n" + c.ALLBook);
+        c.reduceBook(oldMan, 2);
+        System.out.println("É¾ï¿½ï¿½ï¿½é¼®ï¿½ï¿½\n" + c.ALLBook);
 
 
+        System.out.println("Ñ°ï¿½ï¿½ï¿½é¼®Title\n:");
+        c.findBasedTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ëº£");
 
-        System.out.println("Ñ°ÕÒÊé¼®Title\n:");
-        c.findBasedTitle("ÀÏÈËÓëº£");
+        System.out.println("Ñ°ï¿½ï¿½ï¿½é¼®publish\n:");
+        c.findBasedPublish("ï¿½Ïºï¿½");//NULL
+        System.out.println("Ñ°ï¿½ï¿½ï¿½é¼®publish\n:");
+        c.findBasedPublish("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
-        System.out.println("Ñ°ÕÒÊé¼®publish\n:");
-        c.findBasedPublish("ÉÏº£");//NULL
-        System.out.println("Ñ°ÕÒÊé¼®publish\n:");
-        c.findBasedPublish("Î÷µç³ö°æÉç");
-
-        System.out.println("Ñ°ÕÒÊé¼®authors\n:");
-        c.findBasedAuthor("ÀîËÄ");
-        c.findBasedAuthor("ÀÏÁù");
-        c.findBasedAuthor("ÕÅÈı");
+        System.out.println("Ñ°ï¿½ï¿½ï¿½é¼®authors\n:");
+        c.findBasedAuthor("ï¿½ï¿½ï¿½ï¿½");
+        c.findBasedAuthor("ï¿½ï¿½ï¿½ï¿½");
+        c.findBasedAuthor("ï¿½ï¿½ï¿½ï¿½");
 
 
     }

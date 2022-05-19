@@ -1,28 +1,38 @@
 package Six_ExceptionHandling;
 
 
-import java.io.*;
-import java.util.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
 class ListOfNumbersDeclared {
-    private ArrayList<Integer> list;
     private static final int size = 10;
-    public ListOfNumbersDeclared() {//¹¹Ôì·½·¨
+    private ArrayList<Integer> list;
+
+    public ListOfNumbersDeclared() {//ï¿½ï¿½ï¿½ì·½ï¿½ï¿½
         list = new ArrayList<Integer>(size);
         for (int i = 0; i < size; i++)
-            list.add(i);    }
+            list.add(i);
+    }
+
     public void writeList()
-            throws IOException, IndexOutOfBoundsException {//ÉùÃ÷Å×³öÒì³£
+            throws IOException, IndexOutOfBoundsException {//ï¿½ï¿½ï¿½ï¿½ï¿½×³ï¿½ï¿½ì³£
         PrintWriter out = new PrintWriter(new FileWriter("OutFile1.txt"));
         for (int i = 0; i < size; i++)
             out.println("Value at: " + i + " = " + list.get(i));
-        out.close();    }
+        out.close();
+    }
 }
+
 public class P25_TestListOfNumbersDeclared {
     public static void main(String args[]) {
-        try { ListOfNumbersDeclared list = new ListOfNumbersDeclared();
+        try {
+            ListOfNumbersDeclared list = new ListOfNumbersDeclared();
             list.writeList();
-        } catch (Exception e) { System.out.println("ERROR");}
+        } catch (Exception e) {
+            System.out.println("ERROR");
+        }
         System.out.println("A list of numbers created and stored in OutFile1.txt");
     }
 }

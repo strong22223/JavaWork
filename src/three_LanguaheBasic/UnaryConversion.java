@@ -1,34 +1,36 @@
 package three_LanguaheBasic;
 
-public class UnaryConversion{
-	public static void main(String[] args){
-		byte b=2;
-		char c='\u1234';
-		int x=8,y=3;
-		//byte b2 = -b; //int值不能直接赋给byte类型变量b2
-		//char c2 = +c; //int值不能直接赋给char类型变量c2
-		char c3=c++;//
-		System.out.println((-b) + ";" + (+c));
-		int i=~b;	//byte转换为int
-		System .out .println( i  );
-		System.out.println(Integer.toHexString(i));
-		System.out.println(x/y);
-		System.out.println(x/(float)y);
-		
-		int a=1;
-		double d=1.0;
-		System.out .println(a=46/9);
-		System.out .println(a=46%9+4*4-2);
-		System.out .println(a=45+43%5*(23*3%2));
-		System.out .println(d=4+d*d+4);
-		a=1;d=1.0;
-		System.out .println(d+=1.5*3+(++a));
-		a=1;d=1.0;
-		System.out .println(d-=1.5*3+a++);
-		long r=34L;int a1=3;
-		System .out .println(r/a1);
-		
-		
-		
-	}
+public class UnaryConversion {
+    public static void main(String[] args) {
+        byte b = 2;
+        char c = '\u1234';
+        int x = 8, y = 3;
+        //byte b2 = -b; //int值锟斤拷锟斤拷直锟接革拷锟斤拷byte锟斤拷锟酵憋拷锟斤拷b2
+        //char c2 = +c; //int值锟斤拷锟斤拷直锟接革拷锟斤拷char锟斤拷锟酵憋拷锟斤拷c2
+        char c3 = c++;//
+        System.out.println((-b) + ";" + (+c));
+        int i = ~b;    //byte转锟斤拷为int
+        System.out.println(i);
+        System.out.println(Integer.toHexString(i));
+        System.out.println(x / y);
+        System.out.println(x / (float) y);
+
+        int a = 1;
+        double d = 1.0;
+        System.out.println(a = 46 / 9);
+        System.out.println(a = 46 % 9 + 4 * 4 - 2);
+        System.out.println(a = 45 + 43 % 5 * (23 * 3 % 2));
+        System.out.println(d = 4 + d * d + 4);
+        a = 1;
+        d = 1.0;
+        System.out.println(d += 1.5 * 3 + (++a));
+        a = 1;
+        d = 1.0;
+        System.out.println(d -= 1.5 * 3 + a++);
+        long r = 34L;
+        int a1 = 3;
+        System.out.println(r / a1);
+
+
+    }
 }

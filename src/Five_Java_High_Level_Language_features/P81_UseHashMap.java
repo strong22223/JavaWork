@@ -1,22 +1,24 @@
 package Five_Java_High_Level_Language_features;
-import java.util.*;
+
+import java.util.HashMap;
+
 public class P81_UseHashMap {
-    public static void main(String []args) {
+    public static void main(String[] args) {
         HashMap<String, String> hScore = new HashMap<>();
-        hScore.put("ÕÅÒ»", "86");
-        hScore.put("Àî¶þ", "98");
-        hScore.put("º£·É", "99");
-        System.out.println("°´×Ö·û´®Êä³ö£º" + hScore.toString());
+        hScore.put("ï¿½ï¿½Ò»", "86");
+        hScore.put("ï¿½ï¿½ï¿½", "98");
+        hScore.put("ï¿½ï¿½ï¿½ï¿½", "99");
+        System.out.println("ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + hScore.toString());
 
-        hScore.put("Àî¶þ", "77");
-        System.out.println("°´×Ö·û´®Êä³ö£º" + hScore);
+        hScore.put("ï¿½ï¿½ï¿½", "77");
+        System.out.println("ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + hScore);
 
-        hScore.remove("ÕÅÒ»");
-        System.out.println("ÐÞ¸Ä²¢É¾³ýÖ®ºó");
-        System.out.println("°´×Ö·û´®Êä³ö£º" + hScore);
+        hScore.remove("ï¿½ï¿½Ò»");
+        System.out.println("ï¿½Þ¸Ä²ï¿½É¾ï¿½ï¿½Ö®ï¿½ï¿½");
+        System.out.println("ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + hScore);
 
-        System.out.println(hScore.containsValue("ÀîËÄ"));
-        System.out.println(hScore.containsKey("ÀîËÄ"));
+        System.out.println(hScore.containsValue("ï¿½ï¿½ï¿½ï¿½"));
+        System.out.println(hScore.containsKey("ï¿½ï¿½ï¿½ï¿½"));
 
     }
 }

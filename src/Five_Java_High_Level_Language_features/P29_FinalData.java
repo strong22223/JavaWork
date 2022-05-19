@@ -2,25 +2,31 @@ package Five_Java_High_Level_Language_features;
 
 import java.util.Random;
 
-class Value { int i;
-    public Value(int i) { this.i = i; }
+class Value {
+    int i;
+
+    public Value(int i) {
+        this.i = i;
+    }
 }
+
 public class P29_FinalData {
     private static Random rand = new Random(47);
-    private final int valueOne = 9;		// »ù±¾ÀàÐÍ±àÒëÊ±³£Á¿
-    private final int i4 = rand.nextInt(20);// ÔËÐÐÊ±²»¿É±ä,µ«·Ç±àÒëÊ±³£Á¿
+    private final int valueOne = 9;        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í±ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+    private final int i4 = rand.nextInt(20);// ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½É±ï¿½,ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+    private final Value v2 = new Value(22);    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½ï¿½
+    private final int[] a = {1, 2, 3, 4, 5, 6};    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½ï¿½
     private Value v1 = new Value(11);
-    private final Value v2 = new Value(22);	//ÒýÓÃÀàÐÍ³£Á¿
-    private final int[] a = { 1, 2, 3, 4, 5, 6 };	//Êý×éÀàÐÍ³£Á¿
+
     public static void main(String[] args) {
         P29_FinalData fd1 = new P29_FinalData();
-        //fd1.valueOne++; fd1.i4++; 	//valueOne, i4²»ÄÜ¸ü¸Ä
-        fd1.v1 = new Value(9);	// v1²»ÊÇfinalµÄ, ¿ÉÒýÓÃµ½ÐÂµÄ¶ÔÏó
-        // fd1.v2=new Value(0); 	//v2ÊÇfinalµÄ,²»ÄÜÒýÓÃµ½ÐÂµÄ¶ÔÏó
-        fd1.v2.i++;		// v2ÒýÓÃ²»ÄÜ¸ü¸Ä,µ«¶ÔÏó±¾Éí¿É¸ü¸Ä
-        // fd1.a=new int[3];	//Êý×éaÎªfinal,²»ÄÜÒýÓÃµ½ÐÂµÄÊý×é
+        //fd1.valueOne++; fd1.i4++; 	//valueOne, i4ï¿½ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½
+        fd1.v1 = new Value(9);    // v1ï¿½ï¿½ï¿½ï¿½finalï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½
+        // fd1.v2=new Value(0); 	//v2ï¿½ï¿½finalï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½
+        fd1.v2.i++;        // v2ï¿½ï¿½ï¿½Ã²ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸ï¿½ï¿½ï¿½
+        // fd1.a=new int[3];	//ï¿½ï¿½ï¿½ï¿½aÎªfinal,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½
         for (int i = 0; i < fd1.a.length; i++) {
-            fd1.a[i]++; // Êý×éaÊÇfinalµÄ,µ«Êý×éÔªËØ²»ÊÇfinalµÄ
+            fd1.a[i]++; // ï¿½ï¿½ï¿½ï¿½aï¿½ï¿½finalï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø²ï¿½ï¿½ï¿½finalï¿½ï¿½
         }
     }
 }

@@ -1,7 +1,7 @@
 package Five_Java_High_Level_Language_features;
 
 public class P99_AutoBoxingTest {
-    public static void main(String []args) {
+    public static void main(String[] args) {
         Integer x, y;
         int c;
         x = 22;// autoboxing

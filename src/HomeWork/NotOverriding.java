@@ -4,7 +4,7 @@ public class NotOverriding extends Base {
 
     private int i = 2;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         NotOverriding no = new NotOverriding();
 
@@ -16,7 +16,7 @@ public class NotOverriding extends Base {
 
         no = new NotOverriding();
 
-        no.increase();
+//        no.increase();
 
         System.out.println(no.i);
 
@@ -26,17 +26,16 @@ public class NotOverriding extends Base {
 
 }
 
-class Base{
+class Base {
 
     private int i = 100;
 
-    public void increase(){
+    public void increase() {
 
         this.i++;
-
     }
 
-    public int getI(){
+    public int getI() {
 
         return this.i;
 

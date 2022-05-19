@@ -1,21 +1,22 @@
 package Six_ExceptionHandling;
 
 public class P20 {
-    public static void main(String args[]){
-        int i = 0 ;
-        String greetings[]={"ÕÅÈı!","ÀÏÁù!","ÀîËÄ!"};
-        while (i<4){
+    public static void main(String args[]) {
+        int i = 0;
+        String greetings[] = {"ï¿½ï¿½ï¿½ï¿½!", "ï¿½ï¿½ï¿½ï¿½!", "ï¿½ï¿½ï¿½ï¿½!"};
+        while (i < 4) {
             try {
                 System.out.println(greetings[i]);
-            }catch(ArrayIndexOutOfBoundsException e){
+            } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Re-setting Index Value");
-                i=-1;
-            }finally{
+                i = -1;
+            } finally {
                 System.out.println("This is always printed");
             }
-            try{
+            try {
                 Thread.sleep(10000);
-            }catch (InterruptedException e){}
+            } catch (InterruptedException e) {
+            }
             i++;
         }
     }
