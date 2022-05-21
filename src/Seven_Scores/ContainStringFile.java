@@ -36,10 +36,10 @@ public class ContainStringFile {
 
     }
     public static void main(String args[]){
-        File a=new File("D:\\WorkDoxc\\xd_javawork");
+        File a=new File("testSevenContainStringFile");
         ContainStringFile v=new ContainStringFile();
        try{
-           v.findString(a,"iloveyou");
+           v.findString(a,"i love you");
        }catch(IOException e){
            System.out.printf(e.getMessage());
        }
