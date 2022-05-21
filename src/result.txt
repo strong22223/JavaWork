@@ -1,0 +1,2 @@
+numberOfWord:A:9 B:1 C:1 D:9 E:1 F:2 G:0 H:0 I:0 J:1 K:1 L:0 M:0 N:0 O:2 P:1 Q:0 R:0 S:9 T:0 U:0 V:0 W:0 X:0 
+numberOfString:0
