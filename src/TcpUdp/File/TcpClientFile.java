@@ -1,12 +1,12 @@
-package TcpUdp;
-import java.io.*;
+package TcpUdp.File;
 import java.net.*;
+import java.io.*;
  public class TcpClientFile {
     //客户端
     public static void main(String[] args)throws Exception {
         // 1.创建一个Socket连接
         InetAddress serverIp = InetAddress.getByName("127.0.0.1");
-//        System.out.println(serverIp);
+        System.out.println(serverIp);
         int port = 9980;
         Socket socket = new Socket(serverIp,port);
         // 2.创建一个输出流

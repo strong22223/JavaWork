@@ -1,4 +1,4 @@
-package TcpUdp;
+package TcpUdp.File;
 
 import java.io.*;
  import java.net.*;
@@ -14,6 +14,7 @@ public class TcpServerFile {
         serverSocket=new ServerSocket(9980);
         //2.监听客户端的链接
         socket=serverSocket.accept();//阻断链接，会一直等待客户端的链接
+
         //3。获取输入流
         is=socket.getInputStream();
 
