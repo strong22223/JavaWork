@@ -7,7 +7,8 @@ class ToJoin extends Thread {
 
     public void run() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
+            System.out.println( "ÕýÔÚÌí¼Ó:");
         } catch (InterruptedException e) {
         }
         System.out.println(Thread.currentThread().getName() + " awake!");
@@ -16,12 +17,14 @@ class ToJoin extends Thread {
 
 class Joiner implements Runnable {
     private ToJoin tojoin;
+
     public Joiner(ToJoin t) {
         this.tojoin = t;
     }
+
     public void run() {
         try {
-            this.tojoin.join();
+            this.tojoin.join(2000);
         } catch (InterruptedException e) {
         }
         System.out.println(this.tojoin.getName() + " join finished");
@@ -31,8 +34,8 @@ class Joiner implements Runnable {
 public class TestJoin {
     public static void main(String[] args) {
         ToJoin t1 = new ToJoin("t1");
-         new Thread(new Joiner(t1)).start();
-         t1.start();
+        new Thread(new Joiner(t1)).start();
+        t1.start();
 
     }
 }
